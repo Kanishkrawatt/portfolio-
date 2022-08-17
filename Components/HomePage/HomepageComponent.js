@@ -8,12 +8,18 @@ export const MainInfo = styled(flexCenter)`
     color:white;
     flex-direction: column;
     height: 100vh;
+    &::selection{
+    background-color: transparent;
+  }
 `
 
 export const Name = styled.div`
     font-family: 'Rum Raisin', sans-serif;
     font-size:6rem;
     transform: translateY(-10vh);
+    &::selection{
+    background-color: transparent;
+  }
 `
 
 export const Shortinfo = styled.div`
@@ -21,5 +27,8 @@ export const Shortinfo = styled.div`
     font-size: 3rem;
     transform: translateY(-10vh);
     color: #F7ECDE;
+    &::selection{
+    background-color: transparent;
+  }
 
 `

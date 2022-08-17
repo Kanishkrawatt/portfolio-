@@ -10,7 +10,7 @@ import Link from "next/link";
 function Nevbar(){
   let NevbarContent = [{"Name":"Home","Link":"#Home","img":"home"},
   {"Name":"About","Link":"#About","img":"about"},
-  {"Name":"Project","Link":"/Project","img":"project"},
+  {"Name":"Path","Link":"#Path","img":"project"},
   {"Name":"Contact","Link":"/Contact","img":"contact"}]
   const [check, setcheck] = useState(false)
   const toggleActive = {

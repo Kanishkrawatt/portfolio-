@@ -10,9 +10,14 @@ export const AboutPageContainer = styled(flexCenter)`
 
 export const AboutMe = styled.h1`
     font-family: 'Rum Raisin', sans-serif;
+    &::selection{
+    background-color: transparent;
+  }
 `
 export const AboutPara = styled.p`
     margin:0 20vw;
-
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    &::selection{
+    background-color: transparent;
+  }
 `

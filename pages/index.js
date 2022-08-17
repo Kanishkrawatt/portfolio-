@@ -2,6 +2,7 @@
 import Foot from "../Components/Layout/foot/foot";
 import About from "../Components/About/about";
 import Head from "next/head";
+import Path from "../Components/Path/path";
 import Nevbar from "../Components/Layout/nevbar/nevbar";
 import Homepage from "../Components/HomePage/Homepage";
 import PageAnimation from "../Components/PageAnimation/page";
@@ -21,8 +22,8 @@ export default function Home() {
     {/* <PageAnimation /> */}
       <Homepage />
       <About />
-      {/* <Map />
-      <Contact /> */}
+      <Path />
+      {/* <Contact /> */}
       <Foot />
     </>
   );
