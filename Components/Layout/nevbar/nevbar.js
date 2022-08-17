@@ -1,19 +1,15 @@
 import React, { useEffect, useState } from "react";
-import Link from "next/link";
 import Image from "next/image";
 
 
 import {NevbarUl,
-  Nevbarli,
-  HamMenu,
-  HamburgerMenu,
-  HameBig,
-  Hamli} 
+  Nevbarli} 
   from "./nevbarComponents"
+import Link from "next/link";
 
 function Nevbar(){
-  let NevbarContent = [{"Name":"Home","Link":"/","img":"home"},
-  {"Name":"About","Link":"/About","img":"about"},
+  let NevbarContent = [{"Name":"Home","Link":"#Home","img":"home"},
+  {"Name":"About","Link":"#About","img":"about"},
   {"Name":"Project","Link":"/Project","img":"project"},
   {"Name":"Contact","Link":"/Contact","img":"contact"}]
   const [check, setcheck] = useState(false)
@@ -28,7 +24,7 @@ function Nevbar(){
   return(
       <NevbarUl>
         {NevbarContent.map((content,index)=>{
-          return(<Nevbarli key={index} onClick={()=>{setcheck(!check)}} /*style={check?toggleActive:{}}*/ ><Image src ={`/icons8-${content.img}-32.png`} height ="25px" alt="img" width="25px" /> {content.Name}</Nevbarli>)
+          return(<Link key={index} href={content.Link}><Nevbarli  onClick={()=>{setcheck(!check)}} /*style={check?toggleActive:{}}*/ ><Image src ={`/icons8-${content.img}-32.png`} height ="25px" alt="img" width="25px" /> {content.Name}</Nevbarli></Link>)
         }
         )}
       </NevbarUl>
