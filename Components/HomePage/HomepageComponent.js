@@ -30,5 +30,9 @@ export const Shortinfo = styled.div`
     &::selection{
     background-color: transparent;
   }
+  @media (max-width: 480px){
+      font-size: 1.2rem;
+
+    }
 
 `

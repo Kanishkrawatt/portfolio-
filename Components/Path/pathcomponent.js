@@ -1,8 +1,8 @@
 import styled from "styled-components";
-import { flexCenter } from "../../styles/flexCenter";
 
 export const MyPathsContainer = styled.div`
-  height: 200vh;
+  height: auto;
+  padding-bottom: 10rem;
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -12,6 +12,7 @@ export const MyPathsContainer = styled.div`
 `;
 export const ChosePath = styled.h1`
   font-family: "Rum Raisin", sans-serif;
+  margin-bottom: 5rem;
   &::selection{
     background-color: transparent;
   }
@@ -19,11 +20,16 @@ export const ChosePath = styled.h1`
 export const PathHeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
-  gap: 10rem;
+  gap: 20rem;
+  @media (max-width: 480px){
+  flex-direction: column;
+  gap:5rem;
+  }
 `;
 export const PathHeader = styled.div`
   display: flex;
   flex-direction: row;
+  width: 180px;
   border: 1px solid #9c9efe;
   background-color: #9c9efe;
   padding: 2rem;
@@ -32,16 +38,18 @@ export const PathHeader = styled.div`
   &::selection{
     background-color: transparent;
   }
+  
 `;
 
 export const Timeline_Line = styled.div`
     display: block;
-    height: 10vh;
+    margin-top: 1.6rem;
+    height: 15vh;
     width: 5px;
     background-color: white;
     &::after{
         content: " ";
-        margin-top: 10vh;
+        margin-top: 15vh;
         margin-left:-10px;
         height: 1rem;
         border: 5px solid orange;
@@ -55,28 +63,20 @@ export const Timeline = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 `
 
 export const Timeline_container = styled.div`
-    display: block;
+    display: flex;
+    position:absolute;
+    ${(props) => {
+        return `
+        margin-top:${(props.pos)*10+14}rem;
+        `}};
     height: 5rem;
     width: 10rem;
-    margin-top: -2rem;
     border-radius: 100px;
-    margin-right:${props=>props.right?'15rem':'-15rem'};
-
+    margin-right:${props=>props.right==1?'15rem':'-15rem'};
+    align-items: center;
+    justify-content: center;
     background-color: white;
-    &::before{
-        content: " ";
-        display:block;
-        width: 0;
-        height: 0;
-        margin-top: 1.5rem;
-        border-top: 1rem solid transparent;
-        border-left:${props=>props.right?"2rem solid white":"0rem solid white"};
-        border-right:${props=>props.right?"0rem solid white":"2rem solid white"};
-        border-bottom: 1rem solid transparent;
-        margin-left:${props=>props.right?"9rem":"-1rem"};
-    }
 `

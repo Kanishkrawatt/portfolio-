@@ -10,9 +10,15 @@ export const NevbarUl= styled.ul`
     left: 0px;
     height: 100vh;
     width: 5rem;
+    margin-left: 0px;
     justify-content: center;
     cursor: pointer;
     z-index: 2;
+    
+    @media (max-width: 480px){
+      padding-inline-start:10px
+}
+
     
 `
 export const Nevbarli= styled.li`
@@ -53,4 +59,6 @@ export const Nevbarli= styled.li`
     &::selection{
       background-color: transparent;
     }
+
+    
 `
