@@ -47,15 +47,6 @@ export const Nevbarli= styled.li`
       font-size: small;
       transition: max-width 0.5s;
     }
-    &:active{
-      background-color: lightblue;
-      min-height: 30px;
-      max-height: 30px;
-      max-width: 90px;
-      gap: 10px;
-      font-size: small;
-      transition: max-width 0.5s;
-    }
     &::selection{
       background-color: transparent;
     }

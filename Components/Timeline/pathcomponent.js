@@ -20,6 +20,7 @@ export const ChosePath = styled.h1`
 export const PathHeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
   gap: 20rem;
   @media (max-width: 480px){
   flex-direction: column;
@@ -70,7 +71,7 @@ export const Timeline_container = styled.div`
     position:absolute;
     ${(props) => {
         return `
-        margin-top:${(props.pos)*10+14}rem;
+        margin-top:${(props.pos)*10+22}rem;
         `}};
     height: 5rem;
     width: 10rem;
@@ -79,4 +80,7 @@ export const Timeline_container = styled.div`
     align-items: center;
     justify-content: center;
     background-color: white;
+    &::selection{
+      background-color: transparent;
+    }
 `
