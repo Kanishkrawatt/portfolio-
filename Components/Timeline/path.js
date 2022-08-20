@@ -10,6 +10,7 @@ import {
   Timeline_container,
   PathContainer,
 } from "./pathcomponent";
+[{ "PathHeader": "Web Developement", "Path": [{"Heading":"HTML","About":"yo","side":"1"},{"Heading":"CSS","About":"yo","side":"2"},{"Heading":"JS","About":"yo","side":"1"}] },{ "PathHeader": "Programming", "Path": [{"Heading":"Python","About":"yo","side":"1"},{"Heading":"C","About":"yo","side":"2"},{"Heading":"C++","About":"yo","side":"1"},{"Heading":"Java","About":"yo","side":"2"},{"Heading":"JavaScript","About":"yo","side":"1"}] },{ "PathHeader": "Machine Learning", "Path": [{"Heading":"model1","About":"yo","side":"1"},{"Heading":"Model2","About":"yo","side":"2"},{"Heading":"model3","About":"yo","side":"1"}] },]
 
 function Path() {
   let data = [

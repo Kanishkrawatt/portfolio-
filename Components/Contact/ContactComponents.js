@@ -57,12 +57,15 @@ export const ContactInput = styled.input`
 display: block;
 width:100%;
 background-color: #C1EFFF;
-border: 1px solid black;
+border: 0px;
 border-radius: 10px;
 padding: 0.75rem 1rem;
 margin-bottom: 0.75rem;
 appearance: none;
 line-height: 1.25rem;
+&:active{
+    border: 0px;
+}
 
 `
 
@@ -73,9 +76,27 @@ display: block;
 width:100%;
 background-color: #C1EFFF;
 color: white;
-border: 1px solid black;
+border: 0px;
 border-radius: 10px;
 padding: 0.75rem 1rem;
 margin-bottom: 0.75rem;
 line-height: 5rem;
+&:active{
+    border: 0px;
+}
+`
+
+export  const ContactButton = styled.button`
+padding: 0.75rem 1.5rem;
+background-color: lightblue;
+border-radius: 10px;
+border:0px;
+margin-left: 3%;
+width: 100%;
+
+`
+export const ContactButtonDiv =styled.button`
+display:  flex;
+justify-content: center;
+align-items:center;
 `
