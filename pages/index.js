@@ -20,8 +20,7 @@ export default function Home(props) {
   
   
   return (
-    <>
-      
+    <>      
       <Nevbar data={NevbarData}/>
     <PageAnimation />
       <Homepage data={HomePageData}/>
