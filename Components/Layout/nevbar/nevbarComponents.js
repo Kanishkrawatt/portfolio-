@@ -14,6 +14,9 @@ export const NevbarUl= styled.ul`
     justify-content: center;
     cursor: pointer;
     z-index: 2;
+    &::selection{
+      background-color: transparent;
+    }
     
     @media (max-width: 480px){
       padding-inline-start:10px
