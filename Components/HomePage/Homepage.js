@@ -1,12 +1,13 @@
+import { useState } from "react";
 import { MainInfo, Name, Shortinfo } from "./HomepageComponent";
 
-function Homepage() {
-  let data ={"Name":"Kanishk","Shortinfo":"A Full Stack Web Developer"}
+function Homepage(props) {
+  const [Data,setData]= useState(props.data)
   return (
     <section id="Home">
     <MainInfo>
-      <Name>{data.Name}</Name>
-      <Shortinfo>{data.Shortinfo}</Shortinfo>{" "}
+      <Name>{JSON.parse(Data).Name}</Name>
+      <Shortinfo>{JSON.parse(Data).Shortinfo}</Shortinfo>
     </MainInfo>
     </section>
   );
