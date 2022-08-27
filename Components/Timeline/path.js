@@ -6,9 +6,7 @@ import {
   ChosePath,
   PathHeaderContainer,
   Timeline,
-  Timeline_Line,
   Timeline_container,
-  PathContainer,
   TimeLine_Heading,
   Timeline_container_project_container,
   Timeline_container_project,
@@ -62,16 +60,15 @@ function Path(props) {
                   return (
                     <>
                       <Timeline_container
-                        imgUrl={`./${year}m.png`}
+                        imgUrl={`./${pathdata.year}m.png`}
                         pos={pindex}
                         right={pathdata.side}
                       >
                         <TimeLine_Heading>{pathdata.Heading}</TimeLine_Heading>
-                        <Timeline_Time>Jan</Timeline_Time>
+                        <Timeline_Time>{pathdata.month}</Timeline_Time>
 
                         <TimeLine_Data>
-                          Hey, I learn Python this Year Its very good and i am
-                          god
+                          {pathdata.para}
                         </TimeLine_Data>
                         <Timeline_container_project_container>
                           <Timeline_container_project>

@@ -93,7 +93,6 @@ export const Timeline_Time = styled.p`
   align-items: center;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  /* background-color: #CEE5D0; */
   background-color: #afb4ff;
   margin: 0px;
   width: 100%;
@@ -156,3 +155,4 @@ export const Timeline_container = styled.div`
     }
   }
 `;
+
