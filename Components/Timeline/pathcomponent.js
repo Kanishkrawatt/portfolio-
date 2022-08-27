@@ -22,12 +22,12 @@ export const PathHeaderContainer = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 20rem;
-  
-  @media (max-width: 768px) {
+
+  @media (max-width: 994px) {
     flex-direction: column;
     gap: 5rem;
   }
-  @media (max-width: 992px) {
+  @media (max-width: 1387px) {
     gap: 2rem;
   }
   @media (max-width: 480px) {
@@ -44,7 +44,8 @@ export const PathHeader = styled.div`
   background-color: #9c9efe;
   z-index: 10;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   padding: 2rem;
   cursor: pointer;
   justify-content: center;
@@ -59,45 +60,44 @@ export const Timeline = styled.div`
   align-items: center;
 `;
 export const Timeline_container_project_container = styled.div`
-display:flex;
-justify-content: center;
-align-items: center;
-flex-direction: row;
-gap: 5rem;
-`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 5rem;
+`;
 export const Timeline_container_project = styled.button`
-padding: 0.75rem 1.75rem;
-background-color: #afb4ff;
-border: #afb4ff;
-cursor: pointer;
-
-`
+  padding: 0.75rem 1.75rem;
+  background-color: #afb4ff;
+  border: #afb4ff;
+  cursor: pointer;
+`;
 export const TimeLine_Heading = styled.h1`
-    display: flex;
-    width: 100%;
-    background-color: #B1E1FF;
-    margin: 0px;
-    justify-content: center;
-    height: 5rem;
-    align-items: center;
-    font-family: "Rum Raisin", sans-serif;
-
-`
-export const TimeLine_Data=styled.p`
+  display: flex;
+  width: 100%;
+  background-color: #b1e1ff;
+  margin: 0px;
+  justify-content: center;
+  height: 5rem;
+  align-items: center;
+  font-family: "Rum Raisin", sans-serif;
+`;
+export const TimeLine_Data = styled.p`
   margin: 2rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-`
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+`;
 export const Timeline_Time = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   /* background-color: #CEE5D0; */
   background-color: #afb4ff;
   margin: 0px;
   width: 100%;
-  
-`
+`;
 
 export const Timeline_container = styled.div`
   display: flex;
@@ -130,9 +130,8 @@ export const Timeline_container = styled.div`
     border: 0px;
     border-radius: 50%;
     background-repeat: no-repeat;
-    background-size:cover;
-    background-image: url(${(props)=>props.imgUrl}); 
-
+    background-size: cover;
+    background-image: url(${(props) => props.imgUrl});
   }
   &::before {
     content: "";
@@ -142,5 +141,18 @@ export const Timeline_container = styled.div`
       props.right == 1 ? "translateX(12.5rem)" : "translateX(-12.5rem)"};
     width: 0.25rem;
     background-color: white;
+  }
+  @media (max-width: 745px) {
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-top: 5rem;
+    &::after {
+      content: "";
+      display: none;
+    }
+    &::before {
+      content: "";
+      display: none;
+    }
   }
 `;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Link from "next/link";
 import {
   MyPathsContainer,
   PathHeader,
@@ -13,7 +13,7 @@ import {
   Timeline_container_project_container,
   Timeline_container_project,
   TimeLine_Data,
-  Timeline_Time
+  Timeline_Time,
 } from "./pathcomponent";
 
 function Path(props) {
@@ -35,45 +35,58 @@ function Path(props) {
           {JSON.parse(data).map((content, index) => {
             return (
               <Timeline key={index}>
-                <PathHeader onClick={() => ShowPath(index)}>
-                  {content.PathHeader}
-                </PathHeader>
+                {path == -1 ? (
+                  <Link href="#Timeline">
+                    <PathHeader onClick={() => ShowPath(index)}>
+                      {content.PathHeader}
+                    </PathHeader>
+                  </Link>
+                ) : (
+                  <PathHeader onClick={() => ShowPath(index)}>
+                    {content.PathHeader}
+                  </PathHeader>
+                )}
               </Timeline>
             );
           })}
         </PathHeaderContainer>
         <PathHeaderContainer style={{ flexDirection: "column" }}>
-          <Timeline style={{ paddingTop: "5rem" }}>
-            {path != -1 && <ChosePath>TimeLine</ChosePath>}
-            {path != -1 && (
-              <PathHeader>{JSON.parse(data)[path].PathHeader}</PathHeader>
-            )}
-            {path != -1 &&
-              JSON.parse(data)[path].Path.map((pathdata, pindex) => {
-                return (
-                  <>
-                    <Timeline_container
-                      imgUrl={`./${year}m.png`}
-                      pos={pindex}
-                      right={pathdata.side}
-                    >
+          <section id="Timeline">
+            <Timeline style={{ paddingTop: "5rem" }}>
+              {path != -1 && <ChosePath>TimeLine</ChosePath>}
+              {path != -1 && (
+                <PathHeader>{JSON.parse(data)[path].PathHeader}</PathHeader>
+              )}
+              {path != -1 &&
+                JSON.parse(data)[path].Path.map((pathdata, pindex) => {
+                  return (
+                    <>
+                      <Timeline_container
+                        imgUrl={`./${year}m.png`}
+                        pos={pindex}
+                        right={pathdata.side}
+                      >
+                        <TimeLine_Heading>{pathdata.Heading}</TimeLine_Heading>
+                        <Timeline_Time>Jan</Timeline_Time>
 
-                    <TimeLine_Heading>{pathdata.Heading}</TimeLine_Heading>
-                    <Timeline_Time>Jan</Timeline_Time>
-
-                      <TimeLine_Data>
-                        Hey, I learn Python this Year Its very good and i am god
-                      </TimeLine_Data>
-                      <Timeline_container_project_container>
-                        <Timeline_container_project>Projects</Timeline_container_project>
-                        <Timeline_container_project>More..</Timeline_container_project>
-                      </Timeline_container_project_container>
-                      
-                    </Timeline_container>
-                  </>
-                );
-              })}
-          </Timeline>
+                        <TimeLine_Data>
+                          Hey, I learn Python this Year Its very good and i am
+                          god
+                        </TimeLine_Data>
+                        <Timeline_container_project_container>
+                          <Timeline_container_project>
+                            Projects
+                          </Timeline_container_project>
+                          <Timeline_container_project>
+                            More..
+                          </Timeline_container_project>
+                        </Timeline_container_project_container>
+                      </Timeline_container>
+                    </>
+                  );
+                })}
+            </Timeline>
+          </section>
         </PathHeaderContainer>
       </MyPathsContainer>
     </section>
