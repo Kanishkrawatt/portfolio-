@@ -6,9 +6,11 @@ export const AboutPageContainer = styled(flexCenter)`
     width: 100vw;
     background-color: #C1D5A4;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     @media (max-width: 992px) {
       height: auto;
-      margin-top: 5vh 0;
+      padding: 5vh 0;
   }
     
 `
@@ -37,7 +39,6 @@ export const AboutImg = styled.img`
   @media (max-width: 480px) {
       height: 10rem;
       width: 10rem;
-      margin-left: 2rem;
   }
   @media (max-width: 992px) {
     height: 15rem;
@@ -49,6 +50,9 @@ display: flex;
 margin:0 20vw;
 gap:5rem;
 flex-direction: row;
+justify-content: center;
+    align-items: center;
+
 @media (max-width: 480px) {
     flex-direction: column;
     gap: 1rem;
