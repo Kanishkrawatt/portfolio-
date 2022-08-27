@@ -11,9 +11,9 @@ background-color: #FFE69A;
 export const ContactForm =styled.form`
 width: 100%;
 max-width: 32rem;
-margin: 10% auto;
+margin: 20% auto;
 @media (max-width:480px) {
-    width: 98%;
+    width: 70%;
 }
 
 ` 
@@ -22,6 +22,11 @@ display: flex;
 flex-wrap: wrap;
 gap:1.25rem;
 margin-bottom: 1.5rem;
+@media (max-width:480px) {
+margin-bottom: 0.2rem;
+gap: 0;
+    
+}
 `
 export const ContactInnerDiv = styled.div`
 width: 100%;
