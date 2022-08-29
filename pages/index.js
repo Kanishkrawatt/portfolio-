@@ -35,6 +35,6 @@ export async function getStaticProps() {
   const Data = Alldata[0].data;
   return{
     props: { Data }, // will be passed to the page component as props
-    unstable_revalidate: 1
+    revalidate: 10,
   };
 }
