@@ -16,6 +16,11 @@ const SidbarContainer= styled.div`
   background-color: #F1F1F1;
   box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
   z-index: 10;
+  @media (max-width: 480px) {
+    .sidebar{
+        right: 10px;
+    }
+}
 `
 const Anchor = styled.a`
     color: #2C3333;
