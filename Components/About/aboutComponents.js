@@ -10,7 +10,7 @@ export const AboutPageContainer = styled(flexCenter)`
     align-items: center;
     @media (max-width: 992px) {
       height: auto;
-      padding: 5vh 0;
+      padding: 8vh 0;
   }
     
 `

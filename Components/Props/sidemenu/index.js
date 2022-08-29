@@ -17,10 +17,8 @@ const SidbarContainer= styled.div`
   box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 8px;
   z-index: 10;
   @media (max-width: 480px) {
-    .sidebar{
-        right: 10px;
-    }
-}
+    display: none;
+  }
 `
 const Anchor = styled.a`
     color: #2C3333;
