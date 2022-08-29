@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-page-custom-font */
 import db from "../db";
 import Foot from "../Components/Layout/foot/foot";
+import Sidebar from "../Components/Props/sidemenu";
 import About from "../Components/About/about";
 import Path from "../Components/Timeline/path";
 import Nevbar from "../Components/Layout/nevbar/nevbar";
@@ -19,6 +20,7 @@ export default function Home(props) {
   return (
     <>      
       <Nevbar data={NevbarData}/>
+      <Sidebar />
     <PageAnimation />
       <Homepage data={HomePageData}/>
       <About  data={AboutPageData}/>

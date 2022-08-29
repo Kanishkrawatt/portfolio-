@@ -5,12 +5,13 @@ import OnLoadAnimation from '../Components/OnLoadAnimation/loadingAnimation';
 
 
 function MyApp({ Component, pageProps }) {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   React.useEffect(() => {
-    setLoading(true)
     setTimeout(() => setLoading(false), 3000);
+    setLoading(true)
   }, []);
+  
   return (
     <>
       <Head>
