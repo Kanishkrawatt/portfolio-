@@ -10,9 +10,6 @@ import Contact from "../Components/Contact";
 import { useState,useEffect } from "react";
 export default function Home(props) {
   const [data,setdata] = useState(JSON.parse(props.Data))
-  useEffect(() => {
-    setdata(props.Data)
-  }, [props.Data])
   let HomePageData = JSON.stringify(data.HomePageData)
   let AboutPageData = JSON.stringify(data.AboutPageData)
   let TimeLineData = JSON.stringify(data.TimeLineData)
@@ -32,11 +29,12 @@ export default function Home(props) {
   );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   let data = await db.collection("data").get()
   let Alldata = data.docs.map(entry=>entry.data())
   const Data = Alldata[0].data;
   return{
     props: { Data }, // will be passed to the page component as props
+    unstable_revalidate:60,
   };
 }
