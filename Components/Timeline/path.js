@@ -28,7 +28,7 @@ function Path(props) {
   return (
     <section id="Path">
       <MyPathsContainer>
-        <ChosePath>ChosePath</ChosePath>
+        <ChosePath>TimeLines</ChosePath>
         <PathHeaderContainer>
           {JSON.parse(data).map((content, index) => {
             return (
