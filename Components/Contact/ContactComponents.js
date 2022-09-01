@@ -5,6 +5,7 @@ export const ContactPage = styled(flexCenter)`
 height: 100vh;
 width: 100vw;
 background-color: #FFE69A;
+z-index: 10;
 
 ` 
 
@@ -12,7 +13,7 @@ export const ContactForm =styled.form`
 width: 100%;
 max-width: 32rem;
 margin: 20% auto;
-@media (max-width:480px) {
+@media (max-width:612px) {
     width: 70%;
 }
 
