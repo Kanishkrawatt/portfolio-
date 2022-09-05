@@ -25,13 +25,20 @@ export const Name = styled.div`
 export const Shortinfo = styled.div`
     font-family: 'Megrim', cursive;
     font-size: 3rem;
-    transform: translateY(-10vh);
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 23rem;
+    padding: 0rem auto;
+    transform: translateY(-10vh) translateX(3vw);
     color: #F7ECDE;
     &::selection{
     background-color: transparent;
   }
   @media (max-width: 480px){
-      font-size: 1.2rem;
+      font-size: 1.5rem;
+      width: 13rem;
+
 
     }
 
