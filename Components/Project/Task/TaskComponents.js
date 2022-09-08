@@ -36,14 +36,14 @@ export const TaskContainer = styled.div`
   align-content: flex-start;
   width: 80vw;
   gap: 1.2rem;
-  height: 27vh;
+  height: 16rem;
   padding: 1rem 0.5rem;
   border-radius:1rem;
-  margin: 2rem;
   overflow-y: scroll;
   overflow-x: hidden;
   max-height: 58vh;
   margin: 1rem 2rem;
+  margin-top: 3rem;
   
   &::-webkit-scrollbar {
     width: 0.2rem;
@@ -136,3 +136,9 @@ export const Button = styled.div`
 export const ProgressScore = styled.div`
   text-align: end;
 `;
+export const Anchor = styled.a`
+    color: black;
+    z-index: 20;
+    cursor: pointer;
+    
+`
