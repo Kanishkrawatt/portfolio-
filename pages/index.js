@@ -8,7 +8,7 @@ import Nevbar from "../Components/Layout/nevbar/nevbar";
 import Homepage from "../Components/HomePage/Homepage";
 import PageAnimation from "../Components/PageAnimation/page";
 import Contact from "../Components/Contact";
-import Project from "../Components/Project/project";
+import Project from "../Components/Project/Project";
 import { useState,useEffect } from "react";
 export default function Home(props) {
   const [data,setdata] = useState(JSON.parse(props.Data))
