@@ -35,6 +35,18 @@ function Task() {
       Type: "Website",
       ProgressScore: "20%",
     },
+    {
+      EventDate: "December 10,2022",
+      TaskHeading: "Portfolio",
+      Type: "Website",
+      ProgressScore: "70%",
+    },
+    {
+      EventDate: "December 10,2022",
+      TaskHeading: "Work Push",
+      Type: "Website",
+      ProgressScore: "20%",
+    },
   ];
   const colortheme = {
     main: "#D2D79F",

@@ -35,8 +35,8 @@ export const TaskContainer = styled.div`
   flex-wrap: wrap;
   align-content: flex-start;
   width: 80vw;
-  gap: 1.5rem;
-  height: 58vh;
+  gap: 1.2rem;
+  height: 27vh;
   padding: 1rem 0.5rem;
   border-radius:1rem;
   margin: 2rem;
@@ -46,7 +46,23 @@ export const TaskContainer = styled.div`
   margin: 1rem 2rem;
   
   &::-webkit-scrollbar {
-    display: none;
+    width: 0.2rem;
+    
+  }
+  &::-webkit-scrollbar-button {
+  height: 100px; //for vertical scrollbar
+}
+  &::-webkit-scrollbar-track {
+    background: lightgrey;
+    
+  }
+
+  &::-webkit-scrollbar-thumb {
+     background: gray;
+    }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
   }
   @media(max-width: 480px){
         height: 41vh;
