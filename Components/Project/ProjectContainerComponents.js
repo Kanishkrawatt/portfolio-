@@ -32,7 +32,7 @@ export const ProjectDetailsNumber = styled.div`
     
 `
 export const ProjectDiv = styled.div`
-    height: 90vh;
+    height: 60vh;
     background-color: #F1EFDC;
     display: inline-flex;
     flex-direction: row;
