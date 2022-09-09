@@ -17,6 +17,7 @@ function Project() {
   let year = d.getFullYear();
   let day = d.getDate();
   return (
+    <section id="project">
     <ProjectMain>
     <ProjectTitle>PROJECTS</ProjectTitle>
     <ProjectDiv>
@@ -24,7 +25,7 @@ function Project() {
         <ProjectDivTitle>Projects</ProjectDivTitle>
         <ProjectDivTitle right>{`${month}, ${day}`}</ProjectDivTitle>
       </ProjectDivTitleDiv>
-      <ProjectDetails>
+      <ProjectDetails >
         <ProjectDetailsNumber>24</ProjectDetailsNumber>InProgress
       </ProjectDetails>
       <ProjectDetails>
@@ -36,6 +37,7 @@ function Project() {
       <Task />
     </ProjectDiv>
     </ProjectMain>
+    </section>
   );
 }
 

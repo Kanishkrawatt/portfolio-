@@ -56,7 +56,7 @@ function Path(props) {
                 <PathHeader>{JSON.parse(data)[path].PathHeader}</PathHeader>
               )}
               {path != -1 &&
-                JSON.parse(data)[path].Path.map((pathdata, pindex) => {
+                JSON.parse(data)[path].Path.reverse().map((pathdata, pindex) => {
                   return (
                     <>
                       <Timeline_container
