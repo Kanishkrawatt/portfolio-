@@ -71,6 +71,7 @@ export const ProjectMain= styled.div`
     font-family: 'Megrim', cursive;
     width: 100vw;
     flex-direction: column;
+
     height: auto;
     min-height: 100vh;
     background-color: #FFD07F;
