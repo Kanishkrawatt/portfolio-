@@ -68,11 +68,9 @@ export const ProjectDiv = styled.div`
 `
 export const ProjectMain= styled.div`
     display: flex;
-    font-family: 'Megrim', cursive;
     width: 100vw;
     flex-direction: column;
     height: auto;
-    min-height: 100vh;
     background-color: #FFD07F;
     justify-content: center;
     align-items: center;

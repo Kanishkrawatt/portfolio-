@@ -34,38 +34,16 @@ export const TaskContainer = styled.div`
   display: inline-flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  width: 80vw;
+  width: 70vw;
   gap: 1.2rem;
-  height: 16rem;
+  height: auto;
   padding: 1rem 0.5rem;
   border-radius:1rem;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  max-height: 58vh;
   margin: 1rem 2rem;
   margin-top: 3rem;
   
-  &::-webkit-scrollbar {
-    width: 0.2rem;
-    
-  }
-  &::-webkit-scrollbar-button {
-  height: 100px; //for vertical scrollbar
-}
-  &::-webkit-scrollbar-track {
-    background: lightgrey;
-    
-  }
-
-  &::-webkit-scrollbar-thumb {
-     background: gray;
-    }
-
-  &::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
   @media(max-width: 480px){
-        height: 41vh;
+        height: auto;
     }
 `;
 export const TaskHeading = styled.div`
@@ -93,6 +71,9 @@ export const Type = styled.div`
   font-size: x-small;
   @media (max-width: 1102px) {
     display: none;
+  }
+  @media (max-width: 480px) {
+    display: block;
   }
 `;
 export const Progress = styled.div`
@@ -122,15 +103,20 @@ export const Buttondiv = styled.div`
   justify-content: space-between;
   @media (max-width: 1102px) {
    width: auto;
+   padding:0.5rem 0rem;
   }
 `;
 export const Button = styled.div`
   padding: 0.5rem 1.5rem;
   border-radius: 2rem;
   background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: ${(props) => props.colortheme.gradient};
   @media (max-width: 1102px) {
-    display: ${(props)=>props.left&&'none'};
+    /* display: ${(props)=>props.left&&'none'}; */
+    padding: 0.25rem 0.5rem;
   }
 `;
 export const ProgressScore = styled.div`

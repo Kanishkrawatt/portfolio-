@@ -17,25 +17,10 @@ function Project() {
   let year = d.getFullYear();
   let day = d.getDate();
   return (
-    <section id="project">
+    <section id="Project">
     <ProjectMain>
     <ProjectTitle>PROJECTS</ProjectTitle>
-    <ProjectDiv>
-      <ProjectDivTitleDiv>
-        <ProjectDivTitle>Projects</ProjectDivTitle>
-        <ProjectDivTitle right>{`${month}, ${day}`}</ProjectDivTitle>
-      </ProjectDivTitleDiv>
-      <ProjectDetails >
-        <ProjectDetailsNumber>24</ProjectDetailsNumber>InProgress
-      </ProjectDetails>
-      <ProjectDetails>
-        <ProjectDetailsNumber>24</ProjectDetailsNumber>Upcoming{" "}
-      </ProjectDetails>
-      <ProjectDetails>
-        <ProjectDetailsNumber>24</ProjectDetailsNumber>Total Projects
-      </ProjectDetails>
       <Task />
-    </ProjectDiv>
     </ProjectMain>
     </section>
   );
