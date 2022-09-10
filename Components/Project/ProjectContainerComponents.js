@@ -70,6 +70,7 @@ export const ProjectMain= styled.div`
     display: flex;
     width: 100vw;
     flex-direction: column;
+
     height: auto;
     background-color: #FFD07F;
     justify-content: center;
