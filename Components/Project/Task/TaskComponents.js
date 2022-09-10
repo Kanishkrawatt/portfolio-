@@ -7,6 +7,7 @@ export const TasksDiv = styled.div`
   background-color: ${(props) => props.colortheme.main};
   border-radius: 2rem;
   flex-direction: column;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   @media (max-width: 1102px) {
     width: 90%;
@@ -34,6 +35,8 @@ export const TaskContainer = styled.div`
   display: inline-flex;
   flex-wrap: wrap;
   align-content: flex-start;
+  justify-content: center;
+  align-items: center;
   width: 70vw;
   gap: 1.2rem;
   height: auto;
@@ -103,7 +106,12 @@ export const Buttondiv = styled.div`
   justify-content: space-between;
   @media (max-width: 1102px) {
    width: auto;
-   padding:0.5rem 0rem;
+   padding:0rem;
+   flex-direction: column;
+  }
+  @media (max-width: 480px) {
+    padding:1rem 0rem;
+   flex-direction: row;  
   }
 `;
 export const Button = styled.div`
@@ -117,7 +125,14 @@ export const Button = styled.div`
   @media (max-width: 1102px) {
     /* display: ${(props)=>props.left&&'none'}; */
     padding: 0.25rem 0.5rem;
+    margin: 0.5rem 0rem;
   }
+  @media (max-width: 480px) {
+    padding: 0.25rem 0.5rem;
+
+    margin: 0rem 2rem;
+  }
+
 `;
 export const ProgressScore = styled.div`
   text-align: end;
@@ -127,4 +142,17 @@ export const Anchor = styled.a`
     z-index: 20;
     cursor: pointer;
     
+`
+
+export const ShowMore = styled.div`
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 2rem 6rem;
+    padding: 1rem 4rem;
+    background-color: ${props=>props.color};
+    cursor: pointer;
+    border-radius: 2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 `

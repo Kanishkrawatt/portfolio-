@@ -13,10 +13,12 @@ import {
   Button,
   Buttondiv,
   Type,
-  Anchor
+  Anchor,
+  ShowMore,
 } from "./TaskComponents";
 
 function Task() {
+  const [item, setItem] = React.useState(3);
   let Data = [
     {
       EventDate: "December 10,2022",
@@ -76,8 +78,9 @@ function Task() {
     { main: "#FCF8E8", gradient: "#94B49F" },
   ];
   return (
+    <>
     <TaskContainer>
-      {Data.map((content, index) => (
+      {Data.slice(0,item).map((content, index) => (
         <TasksDiv key={index} colortheme={ColorThemeArr[index%ColorThemeArr.length]}>
           <DateDiv>
             <Date>{content.EventDate}</Date>
@@ -108,7 +111,9 @@ function Task() {
           </Maindiv>
         </TasksDiv>
       ))}
-    </TaskContainer>
+      </TaskContainer>
+      <ShowMore color="#FFEEAF" onClick={()=>Data.length==item?setItem(3):setItem(Data.length)}>{Data.length==item?"Show Less":"Show More"}</ShowMore>
+      </>
   );
 }
 

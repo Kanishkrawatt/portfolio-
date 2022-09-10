@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Kanishk</title>
-        <meta name="description" content="Kanishk" />
+        <meta name="description" content="| Kanishk rawat" />
         <link rel="icon" href="/logo.png"/>
       </Head>
       {!loading ? (

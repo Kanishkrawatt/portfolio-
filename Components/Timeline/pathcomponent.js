@@ -13,6 +13,7 @@ export const MyPathsContainer = styled.div`
 export const ChosePath = styled.h1`
   font-family: "Rum Raisin", sans-serif;
   margin-bottom: 5rem;
+  letter-spacing: 0.125rem;
   &::selection {
     background-color: transparent;
   }

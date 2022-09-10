@@ -17,6 +17,7 @@ export const AboutPageContainer = styled(flexCenter)`
 
 export const AboutMe = styled.h1`
     font-family: 'Rum Raisin', sans-serif;
+    letter-spacing: 0.125rem;
     &::selection{
     background-color: transparent;
   }
