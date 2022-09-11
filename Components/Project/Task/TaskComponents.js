@@ -154,5 +154,7 @@ export const ShowMore = styled.div`
     cursor: pointer;
     border-radius: 2rem;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-
+  &::selection{
+    background-color: transparent;
+  }
 `
