@@ -15,8 +15,12 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Kanishk</title>
-        <meta name="description" content="| Kanishk rawat" />
+        <title>| Kanishk</title>
+        <meta name="description" content="Kanishk rawat Portfolio" />
+        <meta
+          name="keywords"
+          content="Kanishk, Rawat, Portfolio, ikanishk, Kanishkrawat"
+        />
         <link rel="icon" href="/logo.png"/>
       </Head>
       {!loading ? (
