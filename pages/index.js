@@ -16,6 +16,7 @@ export default function Home(props) {
   let AboutPageData = JSON.stringify(data.AboutPageData)
   let TimeLineData = JSON.stringify(data.TimeLineData)
   let NevbarData = JSON.stringify(data.NevbarData)
+  let ProjectPageData = JSON.stringify(data.ProjectData)
   
   
   return (
@@ -24,7 +25,7 @@ export default function Home(props) {
     <PageAnimation />
       <Homepage data={HomePageData}/>
       <About  data={AboutPageData}/>
-      <Project />
+      <Project data ={ProjectPageData} />
       <Path data={TimeLineData}/>
       <Contact />
       <Foot />

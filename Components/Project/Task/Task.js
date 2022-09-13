@@ -17,56 +17,10 @@ import {
   ShowMore,
 } from "./TaskComponents";
 
-function Task() {
+function Task(props) {
   const [item, setItem] = React.useState(3);
-  let Data = [
-    {
-      EventDate: "December 10,2022",
-      TaskHeading: "Overlow",
-      Type: "Blog Website",
-      ProgressScore: "90%",
-    },
-    {
-      EventDate: "December 10,2022",
-      TaskHeading: "Portfolio",
-      Type: "Website",
-      ProgressScore: "70%",
-    },
-    {
-      EventDate: "December 10,2022",
-      TaskHeading: "Work Push",
-      Type: "Website",
-      ProgressScore: "20%",
-    },
-    {
-      EventDate: "December 10,2022",
-      TaskHeading: "Portfolio",
-      Type: "Website",
-      ProgressScore: "70%",
-    },
-    {
-      EventDate: "December 10,2022",
-      TaskHeading: "Work Push",
-      Type: "Website",
-      ProgressScore: "20%",
-    },
-    {
-      EventDate: "December 10,2022",
-      TaskHeading: "Work Push",
-      Type: "Website",
-      ProgressScore: "20%",
-    },
-    {
-      EventDate: "December 10,2022",
-      TaskHeading: "Work Push",
-      Type: "Website",
-      ProgressScore: "20%",
-    },
-  ];
-  const colortheme = {
-    main: "#D2D79F",
-    gradient: "#90B77D",
-  };
+  let Data = JSON.parse(props.data);
+  
   const ColorThemeArr = [
     { main: "#E1FFEE", gradient: "#A5F1E9" },
     { main: "#D2D79F", gradient: "#90B77D" },
