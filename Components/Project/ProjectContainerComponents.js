@@ -78,10 +78,13 @@ export const ProjectMain= styled.div`
     `
 
 export const ProjectTitle = styled.h1`
-    font-size: x-large;
+    font-size:3rem;
     font-weight:bolder;
     letter-spacing: 0.25rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
+    transform:${props=>props.show?"translateY(0px)":"translateY(50px)" } ;
+    opacity: ${props=>props.show?"1":"0"};
+    transition: 0.5s all ease;
     font-family: 'Rum Raisin', sans-serif;
     @media (max-width: 480px){
     
@@ -95,9 +98,6 @@ export const ProjectDivTitleDiv =styled.div`
     justify-content: space-between;
     color: black;
     align-items: center;
-
-
-
 `
 
 export const ProjectDivTitle =styled.h1`

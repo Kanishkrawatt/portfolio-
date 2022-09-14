@@ -16,7 +16,7 @@ import {
 } from "./pathcomponent";
 
 function Path(props) {
-  let [data, setdata] = useState(props.data);
+  let data = props.data;
   let [path, setpath] = useState(-1);
   const ShowPath = (index) => {
     if (path != index) {
@@ -25,11 +25,24 @@ function Path(props) {
       setpath(-1);
     }
   };
-  let year = 2022;
+  const [show, setShow] = useState(false);
+  const handleShow = () => {
+    const path = document.getElementById("Path").offsetTop;
+    if (window.scrollY > path - 600) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
+  };
+
+  if (typeof window !== "undefined") {
+    window.addEventListener("scroll", handleShow);
+  }
+  
   return (
     <section id="Path">
       <MyPathsContainer>
-        <ChosePath>TimeLines</ChosePath>
+        <ChosePath show = {show}>TimeLines</ChosePath>
         <PathHeaderContainer>
           {JSON.parse(data).map((content, index) => {
             return (

@@ -14,10 +14,13 @@ export const AboutPageContainer = styled(flexCenter)`
   }
     
 `
-
 export const AboutMe = styled.h1`
     font-family: 'Rum Raisin', sans-serif;
     letter-spacing: 0.125rem;
+    font-size: 2rem;
+    transform:${props=>props.show?"translateY(0px)":"translateY(50px)" } ;
+    opacity: ${props=>props.show?"1":"0"};
+    transition: 0.5s all ease;
     &::selection{
     background-color: transparent;
   }
@@ -25,6 +28,9 @@ export const AboutMe = styled.h1`
 export const AboutPara = styled.p`
     padding-top:2rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    transform:${props=>props.show?"translateY(0px)":"translateY(50px)" } ;
+    opacity: ${props=>props.show?"1":"0"};
+    transition: 0.5s all ease;
     &::selection{
     background-color: transparent;
   }
@@ -37,6 +43,9 @@ export const AboutImg = styled.img`
   height: 15rem;
   background-color: #D9F8C4;
   border-radius: 50%;
+  transform:${props=>props.show?"translateY(0px)":"translateY(50px)" } ;
+    opacity: ${props=>props.show?"1":"0"};
+    transition: 0.5s all ease;
   @media (max-width: 480px) {
       height: 10rem;
       width: 10rem;

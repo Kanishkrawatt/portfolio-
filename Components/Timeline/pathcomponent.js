@@ -16,6 +16,10 @@ export const ChosePath = styled.h1`
   font-family: "Rum Raisin", sans-serif;
   margin-bottom: 5rem;
   letter-spacing: 0.125rem;
+  font-size: 2rem;
+  transform:${props=>props.show?"translateY(0px)":"translateY(50px)" } ;
+    opacity: ${props=>props.show?"1":"0"};
+    transition: 0.5s all ease;
   &::selection {
     background-color: transparent;
   }

@@ -13,7 +13,7 @@ z-index: 10;
 export const ContactForm =styled.form`
 width: 100%;
 max-width: 32rem;
-margin: 20% auto;
+margin: 10% auto;
 @media (max-width:612px) {
     width: 70%;
 }
