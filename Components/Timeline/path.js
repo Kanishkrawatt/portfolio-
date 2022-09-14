@@ -12,6 +12,7 @@ import {
   Timeline_container_project,
   TimeLine_Data,
   Timeline_Time,
+  Close
 } from "./pathcomponent";
 
 function Path(props) {
@@ -86,6 +87,7 @@ function Path(props) {
           </section>
         </PathHeaderContainer>
       </MyPathsContainer>
+      {path != -1 &&<Link href="#Path"><Close onClick={()=>{setpath(-1)}} >Back to Timeline</Close></Link>}
     </section>
   );
 }

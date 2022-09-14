@@ -4,6 +4,8 @@ export const MyPathsContainer = styled.div`
   height: auto;
   padding-bottom: 10rem;
   display: flex;
+  justify-content: center;
+  min-height: 100vh;
   flex-direction: column;
   width: 100vw;
   background-color: #afb4ff;
@@ -104,8 +106,8 @@ export const Timeline_container = styled.div`
   flex-direction: column;
   height: auto;
   width: 20rem;
-  margin-right: ${(props) => props.right == 1 && "25rem"};
-  margin-left: ${(props) => props.right != 1 && "25rem"};
+  margin-right: ${(props) => props.right != 1 && "25rem"};
+  margin-left: ${(props) => props.right == 1 && "25rem"};
   align-items: center;
   justify-content: center;
   padding: 2% 0;
@@ -124,7 +126,7 @@ export const Timeline_container = styled.div`
     position: absolute;
     height: 5rem;
     transform: ${(props) =>
-      props.right == 1 ? "translateX(12.5rem)" : "translateX(-12.5rem)"};
+      props.right != 1 ? "translateX(12.5rem)" : "translateX(-12.5rem)"};
     display: block;
     width: 5rem;
     border: 0px;
@@ -138,7 +140,7 @@ export const Timeline_container = styled.div`
     position: absolute;
     height: 30rem;
     transform: ${(props) =>
-      props.right == 1 ? "translateX(12.5rem)" : "translateX(-12.5rem)"};
+      props.right != 1 ? "translateX(12.5rem)" : "translateX(-12.5rem)"};
     width: 0.25rem;
     background-color: white;
   }
@@ -156,4 +158,20 @@ export const Timeline_container = styled.div`
     }
   }
 `;
+
+export const Close = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5rem;
+  background-color: #b1e1ff;
+  cursor: pointer;
+  font-family: "Rum Raisin", sans-serif;
+  font-size: 1.5rem;
+  &::selection {
+    background-color: transparent;
+  }
+`;
+
 
