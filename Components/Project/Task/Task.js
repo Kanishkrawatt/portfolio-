@@ -1,5 +1,7 @@
-import React from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect } from "react";
 import Image from "next/image";
+import ScrollAnimation from "../../ScollAnimation/ScrollAnimation";
 import {
   TaskContainer,
   TaskHeading,
@@ -20,7 +22,13 @@ import {
 function Task(props) {
   const [item, setItem] = React.useState(3);
   let Data = JSON.parse(props.data);
-  
+  const ScrollElements = [];
+  Data.forEach((elem,index) => {
+    ScrollElements.push(`Task${index}`);
+  });
+  ScrollAnimation(ScrollElements);
+
+
   const ColorThemeArr = [
     { main: "#E1FFEE", gradient: "#A5F1E9" },
     { main: "#D2D79F", gradient: "#90B77D" },
@@ -35,7 +43,7 @@ function Task(props) {
     <>
     <TaskContainer>
       {Data.slice(0,item).map((content, index) => (
-        <TasksDiv key={index} colortheme={ColorThemeArr[index%ColorThemeArr.length]}>
+        <TasksDiv id={`Task${index}`} key={index} colortheme={ColorThemeArr[index%ColorThemeArr.length]}>
           <DateDiv>
             <Date>{content.EventDate}</Date>
           </DateDiv>

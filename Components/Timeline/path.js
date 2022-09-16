@@ -15,6 +15,8 @@ import {
   Close
 } from "./pathcomponent";
 
+import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
+
 function Path(props) {
   let data = props.data;
   let [path, setpath] = useState(-1);
@@ -25,25 +27,13 @@ function Path(props) {
       setpath(-1);
     }
   };
-  const [show, setShow] = useState(false);
-  const handleShow = () => {
-    const path = document.getElementById("Path").offsetTop;
-    if (window.scrollY > path - 600) {
-      setShow(true);
-    } else {
-      setShow(false);
-    }
-  };
-
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", handleShow);
-  }
-  
+  const ScrollElements = ["Timelines","PathHeader"];
+  ScrollAnimation(ScrollElements);
   return (
     <section id="Path">
       <MyPathsContainer>
-        <ChosePath show = {show}>TimeLines</ChosePath>
-        <PathHeaderContainer>
+        <ChosePath id="Timelines">TimeLines</ChosePath>
+        <PathHeaderContainer id="PathHeader">
           {JSON.parse(data).map((content, index) => {
             return (
               <Timeline key={index}>

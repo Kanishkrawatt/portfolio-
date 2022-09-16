@@ -1,6 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @next/next/no-img-element */
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   AboutPageContainer,
   AboutPara,
@@ -10,33 +11,24 @@ import {
 } from "./aboutComponents";
 import { ShowMore } from "../Project/Task/TaskComponents";
 import Link from "next/link";
+import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
+
 function About(props) {
   let data = props.data;
-  const [show, setShow] = useState(false);
-
-  const handleShow = () => {
-    const about = document.getElementById("About").offsetTop;
-    if (window.scrollY > about - 600) {
-      setShow(true);
-    } else {
-      setShow(false);
-    }
-  };
-
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", handleShow);
-  }
+  const ScrollElements = ["AboutMe", "AboutImg", "AboutPara", "Resume"];
+  ScrollAnimation(ScrollElements);
   return (
     <section id="About">
       <AboutPageContainer>
-        <AboutMe show={show}>About Me</AboutMe>
-
+        <AboutMe id="AboutMe">About Me</AboutMe>
         <AboutContent>
-          <AboutImg show={show} src="/ProfileImg.png" alt="img" />
-          <AboutPara show={show}>{JSON.parse(data).AboutPara}</AboutPara>
+          <AboutImg id="AboutImg" src="/ProfileImg.png" alt="img" />
+          <AboutPara id="AboutPara">{JSON.parse(data).AboutPara}</AboutPara>
         </AboutContent>
         <Link href="/resume.pdf">
-          <ShowMore color="#D9F8C4">Resume</ShowMore>
+          <ShowMore id="Resume" color="#D9F8C4">
+            Resume
+          </ShowMore>
         </Link>
       </AboutPageContainer>
     </section>
