@@ -3,6 +3,7 @@ export const TasksDiv = styled.div`
   height: 15rem;
   width: 20rem;
   padding: 0.5rem 2rem;
+  transition: 1s all ease;
   display: flex;
   background-color: ${(props) => props.colortheme.main};
   border-radius: 2rem;
@@ -37,6 +38,7 @@ export const TaskContainer = styled.div`
   align-content: flex-start;
   justify-content: center;
   align-items: center;
+  transition: 1s all ease;
   width: 70vw;
   gap: 1.2rem;
   height: auto;
@@ -151,6 +153,7 @@ export const ShowMore = styled.div`
     margin: 2rem 2rem 6rem;
     padding: 1rem 4rem;
     background-color: ${props=>props.color};
+  transition: 0.5s all ease;
     cursor: pointer;
     border-radius: 2rem;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

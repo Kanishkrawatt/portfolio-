@@ -16,6 +16,8 @@ export const ChosePath = styled.h1`
   font-family: "Rum Raisin", sans-serif;
   margin-bottom: 5rem;
   letter-spacing: 0.125rem;
+  font-size: 2rem;
+  transition: 0.75s all ease;
   &::selection {
     background-color: transparent;
   }
@@ -25,6 +27,8 @@ export const PathHeaderContainer = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 20rem;
+  transition: 0.75s all ease;
+
 
   @media (max-width: 994px) {
     flex-direction: column;
@@ -173,5 +177,3 @@ export const Close = styled.div`
     background-color: transparent;
   }
 `;
-
-

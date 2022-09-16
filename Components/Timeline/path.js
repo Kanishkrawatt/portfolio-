@@ -15,8 +15,10 @@ import {
   Close
 } from "./pathcomponent";
 
+import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
+
 function Path(props) {
-  let [data, setdata] = useState(props.data);
+  let data = props.data;
   let [path, setpath] = useState(-1);
   const ShowPath = (index) => {
     if (path != index) {
@@ -25,12 +27,13 @@ function Path(props) {
       setpath(-1);
     }
   };
-  let year = 2022;
+  const ScrollElements = ["Timelines","PathHeader"];
+  ScrollAnimation(ScrollElements);
   return (
     <section id="Path">
       <MyPathsContainer>
-        <ChosePath>TimeLines</ChosePath>
-        <PathHeaderContainer>
+        <ChosePath id="Timelines">TimeLines</ChosePath>
+        <PathHeaderContainer id="PathHeader">
           {JSON.parse(data).map((content, index) => {
             return (
               <Timeline key={index}>
