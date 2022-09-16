@@ -64,6 +64,7 @@ export const PathHeader = styled.div`
 export const Timeline = styled.div`
   display: flex;
   flex-direction: column;
+  transition: 0.75s all ease;
   align-items: center;
 `;
 export const Timeline_container_project_container = styled.div`
@@ -108,6 +109,7 @@ export const Timeline_Time = styled.p`
 export const Timeline_container = styled.div`
   display: flex;
   flex-direction: column;
+  transition: 0.75s all ease;
   height: auto;
   width: 20rem;
   margin-right: ${(props) => props.right != 1 && "25rem"};

@@ -18,7 +18,7 @@ import {
 import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
 
 function Path(props) {
-  let data = props.data;
+  let data = JSON.parse(props.data);
   let [path, setpath] = useState(-1);
   const ShowPath = (index) => {
     if (path != index) {
@@ -27,16 +27,20 @@ function Path(props) {
       setpath(-1);
     }
   };
-  const ScrollElements = ["Timelines","PathHeader"];
+  const ScrollElements = ["Timelines"];
+  data.forEach((content, index) => {
+    ScrollElements.push(`Timeline${index}`);
+  });
+
   ScrollAnimation(ScrollElements);
   return (
     <section id="Path">
       <MyPathsContainer>
         <ChosePath id="Timelines">TimeLines</ChosePath>
-        <PathHeaderContainer id="PathHeader">
-          {JSON.parse(data).map((content, index) => {
+        <PathHeaderContainer>
+          {data.map((content, index) => {
             return (
-              <Timeline key={index}>
+              <Timeline id={`Timeline${index}`} key={index}>
                 {path == -1 ? (
                   <Link href="#Timeline">
                     <PathHeader onClick={() => ShowPath(index)}>
@@ -57,13 +61,13 @@ function Path(props) {
             <Timeline style={{ paddingTop: "5rem" }}>
               {path != -1 && <ChosePath>TimeLine</ChosePath>}
               {path != -1 && (
-                <PathHeader>{JSON.parse(data)[path].PathHeader}</PathHeader>
+                <PathHeader>{data[path].PathHeader}</PathHeader>
               )}
               {path != -1 &&
-                JSON.parse(data)[path].Path.reverse().map((pathdata, pindex) => {
+                data[path].Path.reverse().map((pathdata, pindex) => {
                   return (
                     <>
-                      <Timeline_container
+                      <Timeline_container id={`Content${pindex}`}
                         imgUrl={`./${pathdata.year}m.png`}
                         pos={pindex}
                         right={pathdata.side}
