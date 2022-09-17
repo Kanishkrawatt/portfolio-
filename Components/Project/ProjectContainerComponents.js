@@ -69,7 +69,7 @@ export const ProjectMain = styled.div`
   flex-direction: column;
   min-height: 100vh;
   height: auto;
-  background-color: #ffd07f;
+  /* background-color: #ffd07f; */
   justify-content: center;
   align-items: center;
 `;

@@ -161,3 +161,32 @@ export const ShowMore = styled.div`
     background-color: transparent;
   }
 `
+
+export const Tools = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0.5rem 2rem;
+  margin: 1rem 0rem;
+`
+
+export const ToolsName = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  background-color: white;
+  color: ${props=>props.color};;
+  font-size: small;
+  margin: 0rem 0.5rem;
+  cursor: pointer;
+  transition: 0.5s all ease;
+  &:hover{
+    background-color: ${props=>props.colortheme.gradient};
+  }
+  `

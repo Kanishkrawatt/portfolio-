@@ -3,7 +3,7 @@ import { flexCenter } from "../../styles/flexCenter";
 
 
 export const MainInfo = styled(flexCenter)`
-    background-color: #9ED2C6;
+    /* background-color: #9ED2C6; */
     width: 100vw;
     color:white;
     flex-direction: column;

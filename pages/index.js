@@ -10,6 +10,7 @@ import PageAnimation from "../Components/PageAnimation/page";
 import Contact from "../Components/Contact";
 import Project from "../Components/Project/Project";
 import { useState,useEffect } from "react";
+import PageColorAnimation from "../Components/PageAnimation/pageColor";
 export default function Home(props) {
   const [data,setdata] = useState(JSON.parse(props.Data))
   let HomePageData = JSON.stringify(data.HomePageData)
@@ -17,8 +18,7 @@ export default function Home(props) {
   let TimeLineData = JSON.stringify(data.TimeLineData)
   let NevbarData = JSON.stringify(data.NevbarData)
   let ProjectPageData = JSON.stringify(data.ProjectData)
-  
-  
+  PageColorAnimation();
   return (
     <>      
       <Nevbar data={NevbarData}/>

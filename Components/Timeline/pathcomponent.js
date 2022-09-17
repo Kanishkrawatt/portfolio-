@@ -8,7 +8,7 @@ export const MyPathsContainer = styled.div`
   min-height: 100vh;
   flex-direction: column;
   width: 100vw;
-  background-color: #afb4ff;
+  /* background-color: #afb4ff; */
   align-items: center;
   padding-top: 5rem;
 `;
