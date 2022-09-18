@@ -6,7 +6,6 @@ const Footer = styled.div`
   background-repeat: no-repeat;
   background-position:bottom;
   background-size: cover;
-  background-color: #FFE69A;
   z-index: 100;
   text-Align: center;
   padding: 4rem;
