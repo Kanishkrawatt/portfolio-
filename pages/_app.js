@@ -16,12 +16,12 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>| Kanishk</title>
-        <meta name="description" content="Kanishk rawat Portfolio" />
+        <meta name="description" content="I'm a Full Stack Developer,Programmer from India. I have great intrest coding.  " />
         <meta
           name="keywords"
-          content="Kanishk, Rawat, Portfolio, ikanishk, Kanishkrawat"
+          content="Kanishk, Rawat, Portfolio, ikanishk, Kanishkrawatt"
         />
-        <link rel="icon" href="/logo.png"/>
+        <meta name="author" content="Kanishk rawat" />
       </Head>
       {!loading ? (
           <Component {...pageProps} />
