@@ -22,6 +22,7 @@ function MyApp({ Component, pageProps }) {
           content="Kanishk, Rawat, Portfolio, ikanishk, Kanishkrawatt"
         />
         <meta name="author" content="Kanishk rawat" />
+        <link rel="icon" href="/logo.png" />
       </Head>
       {!loading ? (
           <Component {...pageProps} />
