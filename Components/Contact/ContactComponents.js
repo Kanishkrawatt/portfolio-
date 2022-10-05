@@ -3,10 +3,14 @@ import { flexCenter } from "../../styles/flexCenter";
 
 export const ContactPage = styled(flexCenter)` 
 height: auto;
-min-height: 100vh;
+min-height: 120vh;
 width: 100vw;
 /* background-color: #FFE69A; */
-z-index: 10;
+background-image: url("/PageImg/ContactPage.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+z-index: 20;
 
 ` 
 

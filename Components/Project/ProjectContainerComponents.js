@@ -70,6 +70,10 @@ export const ProjectMain = styled.div`
   min-height: 100vh;
   height: auto;
   /* background-color: #ffd07f; */
+  background-image: url("/PageImg/Project.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   justify-content: center;
   align-items: center;
 `;

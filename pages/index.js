@@ -18,7 +18,7 @@ export default function Home(props) {
   let TimeLineData = JSON.stringify(data.TimeLineData)
   let NevbarData = JSON.stringify(data.NevbarData)
   let ProjectPageData = JSON.stringify(data.ProjectData)
-  PageColorAnimation();
+  // PageColorAnimation();
   return (
     <>      
       <Nevbar data={NevbarData}/>

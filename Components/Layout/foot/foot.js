@@ -11,6 +11,7 @@ const Footer = styled.div`
   padding: 4rem;
   padding-top:15rem;
   color: white;
+  background-color: #FFE69A;
   font-Size: 2.5rem;
   font-Family: 'Libre Barcode 39 Text';
   @media (max-width:480px){

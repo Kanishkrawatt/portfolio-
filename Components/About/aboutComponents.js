@@ -5,6 +5,10 @@ export const AboutPageContainer = styled(flexCenter)`
   height: 100vh;
   width: 100vw;
   /* background-color: #c1d5a4; */
+  background-image: url("/PageImg/AboutPage.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   flex-direction: column;
   justify-content: center;
   align-items: center;
