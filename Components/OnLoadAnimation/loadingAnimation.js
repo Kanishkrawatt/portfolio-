@@ -19,11 +19,8 @@ const Container = styled.div`
   align-items: center;
   width: 100vw;
   height: 100vh;
+  overflow: hidden;
   background: #9ED2C6;
-  @media (max-width: 480px) {
-    height: auto;
-    padding: 8vh 0;
-  }
 `
 
 const OnLoadAnimation = () => {
