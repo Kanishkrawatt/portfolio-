@@ -153,7 +153,7 @@ export const ShowMore = styled.div`
     margin: 2rem 2rem 6rem;
     padding: 1rem 4rem;
     background-color: ${props=>props.color};
-  transition: 0.5s all ease;
+    transition: 0.5s all ease;
     cursor: pointer;
     border-radius: 2rem;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

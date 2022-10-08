@@ -10,10 +10,10 @@ export const AboutPageContainer = styled(flexCenter)`
   background-position: center;
   background-size: cover;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   @media (max-width: 992px) {
-    height: auto;
+    height: 150vh;
     padding: 8vh 0;
   }
 `;

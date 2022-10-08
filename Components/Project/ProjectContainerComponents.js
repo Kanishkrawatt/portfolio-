@@ -76,6 +76,13 @@ export const ProjectMain = styled.div`
   background-size: cover;
   justify-content: center;
   align-items: center;
+  justify-content: flex-start;
+  padding-top: 4rem;
+  align-items: center;
+  @media (max-width: 992px) {
+    height: 150vh;
+    padding: 8vh 0;
+  }
 `;
 
 export const ProjectTitle = styled.h1`
