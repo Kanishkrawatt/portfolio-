@@ -2,14 +2,19 @@ import styled from "styled-components";
 import { flexCenter } from "../../styles/flexCenter";
 
 export const ContactPage = styled(flexCenter)`
-  height: auto;
+  height: 100vh;
   width: 100vw;
   /* background-color: #FFE69A; */
   background-image: url("/PageImg/ContactPage.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  z-index: 20;`;
+  z-index: 20;
+  @media (max-width: 992px) {
+    height: 150vh;
+    padding: 8vh 0;
+  }
+  `;
 
 export const ContactForm = styled.form`
   width: 100%;
