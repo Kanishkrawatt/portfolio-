@@ -14,7 +14,7 @@ export const ContactPage = styled(flexCenter)`
     height: 150vh;
     padding: 8vh 0;
   }
-  `;
+`;
 
 export const ContactForm = styled.form`
   width: 100%;

@@ -8,12 +8,12 @@ export const TasksDiv = styled.div`
   background-color: ${(props) => props.colortheme.main};
   border-radius: 2rem;
   flex-direction: column;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   @media (max-width: 1102px) {
     width: 90%;
     height: 10rem;
-
   }
 `;
 export const Maindiv = styled.div`
@@ -26,10 +26,9 @@ export const Maindiv = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-@media (max-width: 480px) {
-  flex-direction: column;
-
+  }
+  @media (max-width: 480px) {
+    flex-direction: column;
   }
 `;
 export const TaskContainer = styled.div`
@@ -43,13 +42,13 @@ export const TaskContainer = styled.div`
   gap: 1.2rem;
   height: auto;
   padding: 1rem 0.5rem;
-  border-radius:1rem;
+  border-radius: 1rem;
   margin: 1rem 2rem;
   margin-top: 3rem;
-  
-  @media(max-width: 480px){
-        height: auto;
-    }
+
+  @media (max-width: 480px) {
+    height: auto;
+  }
 `;
 export const TaskHeading = styled.div`
   justify-content: center;
@@ -69,7 +68,7 @@ export const DateDiv = styled.div`
   width: 100%;
   justify-content: space-between;
   @media (max-width: 1102px) {
-    padding: 0.5rem ;
+    padding: 0.5rem;
   }
 `;
 export const Type = styled.div`
@@ -107,13 +106,13 @@ export const Buttondiv = styled.div`
   width: 100%;
   justify-content: space-between;
   @media (max-width: 1102px) {
-   width: auto;
-   padding:0rem;
-   flex-direction: column;
+    width: auto;
+    padding: 0rem;
+    flex-direction: column;
   }
   @media (max-width: 480px) {
-    padding:1rem 0rem;
-   flex-direction: row;  
+    padding: 1rem 0rem;
+    flex-direction: row;
   }
 `;
 export const Button = styled.div`
@@ -125,7 +124,7 @@ export const Button = styled.div`
   align-items: center;
   color: ${(props) => props.colortheme.gradient};
   @media (max-width: 1102px) {
-    /* display: ${(props)=>props.left&&'none'}; */
+    /* display: ${(props) => props.left && "none"}; */
     padding: 0.25rem 0.5rem;
     margin: 0.5rem 0rem;
   }
@@ -134,33 +133,32 @@ export const Button = styled.div`
 
     margin: 0rem 2rem;
   }
-
 `;
 export const ProgressScore = styled.div`
   text-align: end;
 `;
 export const Anchor = styled.a`
-    color: black;
-    z-index: 20;
-    cursor: pointer;
-    
-`
+  color: black;
+  z-index: 20;
+  cursor: pointer;
+`;
 
 export const ShowMore = styled.div`
-    display: block;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem 2rem 6rem;
-    padding: 1rem 4rem;
-    background-color: ${props=>props.color};
-    transition: 0.5s all ease;
-    cursor: pointer;
-    border-radius: 2rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  &::selection{
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 2rem 6rem;
+  padding: 1rem 4rem;
+  background-color: ${(props) => props.color};
+  transition: 0.5s all ease;
+  cursor: pointer;
+  border-radius: 2rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  &::selection {
     background-color: transparent;
   }
-`
+`;
 
 export const Tools = styled.div`
   display: flex;
@@ -170,7 +168,7 @@ export const Tools = styled.div`
   height: auto;
   padding: 0.5rem 2rem;
   margin: 1rem 0rem;
-`
+`;
 
 export const ToolsName = styled.div`
   display: flex;
@@ -181,12 +179,12 @@ export const ToolsName = styled.div`
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   background-color: white;
-  color: ${props=>props.color};;
+  color: ${(props) => props.color};
   font-size: small;
   margin: 0rem 0.5rem;
   cursor: pointer;
   transition: 0.5s all ease;
-  &:hover{
-    background-color: ${props=>props.colortheme.gradient};
+  &:hover {
+    background-color: ${(props) => props.colortheme.gradient};
   }
-  `
+`;

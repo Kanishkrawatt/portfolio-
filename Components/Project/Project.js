@@ -9,21 +9,21 @@ import {
   ProjectDetailsNumber,
   ProjectDivTitleDiv,
   ProjectMain,
-  ProjectTitle
+  ProjectTitle,
 } from "./ProjectContainerComponents";
 import Task from "./Task/Task";
 import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
 
 function Project(props) {
-  let Data = props.data
+  let Data = props.data;
   const ScrollElements = ["ProjectTit"];
   ScrollAnimation(ScrollElements);
   return (
     <section id="Project">
-    <ProjectMain>
-    <ProjectTitle id="ProjectTit">PROJECTS</ProjectTitle>
-      <Task data = {Data}/>
-    </ProjectMain>
+      <ProjectMain>
+        <ProjectTitle id="ProjectTit">PROJECTS</ProjectTitle>
+        <Task data={Data} />
+      </ProjectMain>
     </section>
   );
 }

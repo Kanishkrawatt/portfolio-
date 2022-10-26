@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "dependencies": {
     "@babel/preset-env": "^7.18.10",
@@ -14,6 +15,7 @@
     "firebase-admin": "^11.0.1",
     "lottie-web": "^5.9.6",
     "next": "12.2.5",
+    "prettier": "^2.7.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",

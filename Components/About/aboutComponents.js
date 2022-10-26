@@ -32,7 +32,7 @@ export const AboutPara = styled.p`
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   transition: 0.75s all ease;
-  
+
   &::selection {
     background-color: transparent;
   }
@@ -45,7 +45,7 @@ export const AboutImg = styled.img`
   background-color: #d9f8c4;
   border-radius: 50%;
   transition: 1s all ease;
-  
+
   @media (max-width: 480px) {
     height: 10rem;
     width: 10rem;

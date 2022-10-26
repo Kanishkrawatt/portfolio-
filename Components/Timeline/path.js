@@ -12,7 +12,7 @@ import {
   Timeline_container_project,
   TimeLine_Data,
   Timeline_Time,
-  Close
+  Close,
 } from "./pathcomponent";
 
 import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
@@ -60,14 +60,13 @@ function Path(props) {
           <section id="Timeline">
             <Timeline style={{ paddingTop: "5rem" }}>
               {path != -1 && <ChosePath>TimeLine</ChosePath>}
-              {path != -1 && (
-                <PathHeader>{data[path].PathHeader}</PathHeader>
-              )}
+              {path != -1 && <PathHeader>{data[path].PathHeader}</PathHeader>}
               {path != -1 &&
                 data[path].Path.reverse().map((pathdata, pindex) => {
                   return (
                     <>
-                      <Timeline_container id={`Content${pindex}`}
+                      <Timeline_container
+                        id={`Content${pindex}`}
                         imgUrl={`./${pathdata.year}m.png`}
                         pos={pindex}
                         right={pathdata.side}
@@ -75,9 +74,7 @@ function Path(props) {
                         <TimeLine_Heading>{pathdata.Heading}</TimeLine_Heading>
                         <Timeline_Time>{pathdata.month}</Timeline_Time>
 
-                        <TimeLine_Data>
-                          {pathdata.para}
-                        </TimeLine_Data>
+                        <TimeLine_Data>{pathdata.para}</TimeLine_Data>
                         <Timeline_container_project_container>
                           <Timeline_container_project>
                             Projects
@@ -94,7 +91,17 @@ function Path(props) {
           </section>
         </PathHeaderContainer>
       </MyPathsContainer>
-      {path != -1 &&<Link href="#Path"><Close onClick={()=>{setpath(-1)}} >Back to Timeline</Close></Link>}
+      {path != -1 && (
+        <Link href="#Path">
+          <Close
+            onClick={() => {
+              setpath(-1);
+            }}
+          >
+            Back to Timeline
+          </Close>
+        </Link>
+      )}
     </section>
   );
 }

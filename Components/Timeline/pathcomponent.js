@@ -29,7 +29,6 @@ export const PathHeaderContainer = styled.div`
   gap: 20rem;
   transition: 0.75s all ease;
 
-
   @media (max-width: 994px) {
     flex-direction: column;
     gap: 5rem;
