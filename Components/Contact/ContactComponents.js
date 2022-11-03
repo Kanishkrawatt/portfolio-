@@ -83,7 +83,6 @@ export const ContactTextArea = styled.textarea`
   display: block;
   width: 100%;
   background-color: #c1efff;
-  color: white;
   border: 0px;
   border-radius: 10px;
   padding: 0.75rem 1rem;
