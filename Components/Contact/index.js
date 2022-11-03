@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import axios from "axios";
+
 import {
   ContactForm,
   ContactLabel,
@@ -14,20 +15,25 @@ import {
 } from "./ContactComponents";
 
 function Contact() {
-  const [FirstName, setFirstName] = useState("");
-  const [LastName, setLastName] = useState("");
-  const [Email, setEmail] = useState("");
-  const [Message, setMessage] = useState("");
-
+  const id = useId();
+  const FirstName = useRef();
+  const LastName = useRef();
+  const Email = useRef();
+  const Message = useRef();
   function submitfunc(e) {
     e.preventDefault();
-    let slug = `${FirstName}-${LastName}-${Email}`;
-    let data = { FirstName, LastName, Email, Message, slug };
+    let data = {
+      id,
+      FirstName: FirstName.current.value,
+      LastName: LastName.current.value,
+      Email: Email.current.value,
+      Message: Message.current.value,
+    };
     axios.post("/api/contact", data);
-    setFirstName("");
-    setEmail("");
-    setLastName("");
-    setMessage("");
+    FirstName.current.value = "";
+    LastName.current.value = "";
+    Email.current.value = "";
+    Message.current.value = "";
   }
 
   return (
@@ -37,42 +43,23 @@ function Contact() {
           <ContactOuterDiv>
             <ContactInnerDivHalf>
               <ContactLabel>First Name</ContactLabel>
-              <ContactInput
-                id="grid-first-name"
-                type="text"
-                value={FirstName}
-                onChange={(e) => setFirstName(e.target.value)}
-              />
+              <ContactInput id="grid-first-name" type="text" ref={FirstName} />
             </ContactInnerDivHalf>
             <ContactInnerDivHalf>
               <ContactLabel>Last Name</ContactLabel>
-              <ContactInput
-                id="grid-last-name"
-                type="text"
-                value={LastName}
-                onChange={(e) => setLastName(e.target.value)}
-              />
+              <ContactInput id="grid-last-name" type="text" ref={LastName} />
             </ContactInnerDivHalf>
           </ContactOuterDiv>
           <ContactOuterDiv>
             <ContactInnerDiv>
               <ContactLabel>E-mail</ContactLabel>
-              <ContactInput
-                id="email"
-                type="email"
-                value={Email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
+              <ContactInput id="email" type="email" ref={Email} />
             </ContactInnerDiv>
           </ContactOuterDiv>
           <ContactOuterDiv>
             <ContactInnerDiv>
               <ContactLabel>Message</ContactLabel>
-              <ContactTextArea
-                id="message"
-                value={Message}
-                onChange={(e) => setMessage(e.target.value)}
-              />
+              <ContactTextArea id="message" ref={Message} />
             </ContactInnerDiv>
           </ContactOuterDiv>
           <ContactOuterDiv>
