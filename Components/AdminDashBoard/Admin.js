@@ -1,9 +1,17 @@
-import React from "react";
-import { CheckUser, IsAdmin, UserInfo ,signOutWithGoogle} from "../../db/firebasefunction";
+import React, { useEffect, useMemo, useState } from "react";
+import {
+  CheckUser,
+  IsAdmin,
+  UserInfo,
+  signOutWithGoogle,
+} from "../../db/firebasefunction";
 import Login from "./Login";
 import styled from "styled-components";
 import { ShowMore } from "../Project/Task/TaskComponents";
 import Link from "next/link";
+import axios from "axios";
+import ChatData from "./Chat/GeneralChat/Chats/ChatData";
+
 export const Messagediv = styled.div`
   display: flex;
   height: 100vh;
@@ -15,10 +23,10 @@ export const Messagediv = styled.div`
   font-size: xx-large;
   flex-direction: column;
 `;
-const index = () => {
+const Admin = (props) => {
   const user = UserInfo();
   const admin = IsAdmin();
-  console.log(admin);
+  const data = props.Data;
   return (
     <>
       {user ? (
@@ -30,7 +38,7 @@ const index = () => {
               backgroundColor: "#c5d8aa",
             }}
           >
-            <Messagediv style={{width:"70vw"}}>
+            <Messagediv style={{ width: "70vw" }}>
               {/* <Messages /> */}
               Hello{" "}
               <span
@@ -42,13 +50,19 @@ const index = () => {
               >
                 {user.displayName}
               </span>
-              <div style={{display:"flex",flexDirection:"row"}}>
+              <div style={{ display: "flex", flexDirection: "row" }}>
                 <Link href={"/"}>
                   <ShowMore color="#D9F8C4" style={{ fontSize: "small" }}>
                     Go Back
                   </ShowMore>
                 </Link>
-                <ShowMore color="#D9F8C4" style={{ fontSize: "small" }} onClick={()=>{signOutWithGoogle()}}>
+                <ShowMore
+                  color="#D9F8C4"
+                  style={{ fontSize: "small" }}
+                  onClick={() => {
+                    signOutWithGoogle();
+                  }}
+                >
                   LogOut
                 </ShowMore>
               </div>
@@ -63,22 +77,34 @@ const index = () => {
                 textAlign: "center",
               }}
             >
-              Messages
+              <p style={{fontSize:"large"}}>Messages</p>
+              <ChatData data={data}>
+                {data &&
+                  data.map((item, index) => {
+                    return <div key={item.id}>{item.Message}</div>;
+                  })}
+              </ChatData>
             </ShowMore>
           </div>
         ) : (
-          <Messagediv style={{backgroundColor:"#c5d8aa"}}>
+          <Messagediv style={{ backgroundColor: "#c5d8aa" }}>
             Your are Not admin
-            <div style={{display:"flex",flexDirection:"row"}}>
-                <Link href={"/"}>
-                  <ShowMore color="#D9F8C4" style={{ fontSize: "small" }}>
-                    Go Back
-                  </ShowMore>
-                </Link>
-                <ShowMore color="#D9F8C4" style={{ fontSize: "small" }} onClick={()=>{signOutWithGoogle()}}>
-                  LogOut
+            <div style={{ display: "flex", flexDirection: "row" }}>
+              <Link href={"/"}>
+                <ShowMore color="#D9F8C4" style={{ fontSize: "small" }}>
+                  Go Back
                 </ShowMore>
-              </div>
+              </Link>
+              <ShowMore
+                color="#D9F8C4"
+                style={{ fontSize: "small" }}
+                onClick={() => {
+                  signOutWithGoogle();
+                }}
+              >
+                LogOut
+              </ShowMore>
+            </div>
           </Messagediv>
         )
       ) : (
@@ -88,4 +114,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Admin;
