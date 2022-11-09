@@ -23,6 +23,18 @@ export const Messagediv = styled.div`
   font-size: xx-large;
   flex-direction: column;
 `;
+export const FlexDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  background-color: #a5f1e9;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  @media (max-width:1017px){
+    flex-direction: column;
+    gap: 0;
+  }
+`;
 const Admin = (props) => {
   const user = UserInfo();
   const admin = IsAdmin();
@@ -31,14 +43,16 @@ const Admin = (props) => {
     <>
       {user ? (
         admin ? (
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              backgroundColor: "#c5d8aa",
-            }}
-          >
-            <Messagediv style={{ width: "70vw" }}>
+          <FlexDiv>
+            <Messagediv
+              style={{
+                width: "100%",
+                backgroundImage: "url('./cloud1.png')",
+                backgroundPosition: "center",
+                backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
+              }}
+            >
               {/* <Messages /> */}
               Hello{" "}
               <span
@@ -52,12 +66,12 @@ const Admin = (props) => {
               </span>
               <div style={{ display: "flex", flexDirection: "row" }}>
                 <Link href={"/"}>
-                  <ShowMore color="#D9F8C4" style={{ fontSize: "small" }}>
+                  <ShowMore color="#E1FFEE" style={{ fontSize: "small" }}>
                     Go Back
                   </ShowMore>
                 </Link>
                 <ShowMore
-                  color="#D9F8C4"
+                  color="#E1FFEE"
                   style={{ fontSize: "small" }}
                   onClick={() => {
                     signOutWithGoogle();
@@ -68,16 +82,18 @@ const Admin = (props) => {
               </div>
             </Messagediv>
             <ShowMore
-              color="#D9F8C4"
+              color="#E1FFEE"
               style={{
+                display:"flex",
+                flexDirection:"column",
                 fontSize: "small",
-                width: "30vw",
-                height: "90vh",
-                marginBottom: "0",
+                width:"70vw",
+                height: "auto",
+                margin:"0",
                 textAlign: "center",
               }}
             >
-              <p style={{fontSize:"large"}}>Messages</p>
+              <p style={{ fontSize: "large" }}>Messages</p>
               <ChatData data={data}>
                 {data &&
                   data.map((item, index) => {
@@ -85,18 +101,18 @@ const Admin = (props) => {
                   })}
               </ChatData>
             </ShowMore>
-          </div>
+          </FlexDiv>
         ) : (
-          <Messagediv style={{ backgroundColor: "#c5d8aa" }}>
+          <Messagediv style={{ backgroundColor: "#E1FFEE" }}>
             Your are Not admin
             <div style={{ display: "flex", flexDirection: "row" }}>
               <Link href={"/"}>
-                <ShowMore color="#D9F8C4" style={{ fontSize: "small" }}>
+                <ShowMore color="#E1FFEE" style={{ fontSize: "small" }}>
                   Go Back
                 </ShowMore>
               </Link>
               <ShowMore
-                color="#D9F8C4"
+                color="#E1FFEE"
                 style={{ fontSize: "small" }}
                 onClick={() => {
                   signOutWithGoogle();
