@@ -20,7 +20,7 @@ function About(props) {
   return (
     <section id="About">
       <AboutPageContainer>
-        <AboutMe id="AboutMe">About Me</AboutMe>
+        <AboutMe id="AboutMe">About</AboutMe>
         <AboutContent>
           <AboutImg id="AboutImg" src="/ProfileImg.png" alt="img" />
           <AboutPara id="AboutPara">{JSON.parse(data).AboutPara}</AboutPara>

@@ -11,6 +11,7 @@ import Contact from "../Components/Contact";
 import Project from "../Components/Project/Project";
 import { useState, useEffect } from "react";
 import PageColorAnimation from "../Components/PageAnimation/pageColor";
+import Skills from "../Components/Skills";
 export default function Home(props) {
   const [data, setdata] = useState(JSON.parse(props.Data));
   let HomePageData = JSON.stringify(data.HomePageData);
@@ -25,6 +26,7 @@ export default function Home(props) {
       <PageAnimation />
       <Homepage data={HomePageData} />
       <About data={AboutPageData} />
+      <Skills data={[]}/>
       <Project data={ProjectPageData} />
       <Path data={TimeLineData} />
       <Contact />

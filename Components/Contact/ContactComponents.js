@@ -4,11 +4,8 @@ import { flexCenter } from "../../styles/flexCenter";
 export const ContactPage = styled(flexCenter)`
   height: 100vh;
   width: 100vw;
-  /* background-color: #FFE69A; */
-  background-image: url("/PageImg/ContactPage.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  align-items: flex-end;
+  background-color: #FFE69A;
   z-index: 20;
   @media (max-width: 992px) {
     height: 150vh;
