@@ -7,7 +7,6 @@ export const ProjectDetails = styled.div`
   color: black;
   height: 5rem;
   width: 8rem;
-  padding-top: 1rem;
   border-radius: 30%;
   @media (max-width: 480px) {
     font-size: x-small;
@@ -67,7 +66,8 @@ export const ProjectMain = styled.div`
   display: flex;
   width: 100vw;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 120vh;
+
   height: auto;
   /* background-color: #ffd07f; */
   background-image: url("/PageImg/Project.svg");
@@ -77,7 +77,7 @@ export const ProjectMain = styled.div`
   justify-content: center;
   align-items: center;
   justify-content: flex-start;
-  padding-top: 4rem;
+  padding-top: 8rem;
   align-items: center;
   @media (max-width: 992px) {
     height: 150vh;
@@ -89,6 +89,9 @@ export const ProjectTitle = styled.h1`
   font-size: 3rem;
   font-weight: bolder;
   letter-spacing: 0.125rem;
+  /* padding: 1rem 2rem; */
+  /* border-radius: 2rem; */
+  /* background-color: #FDF5CA; */
   margin-top: 2rem;
   transition: 1s all ease;
   font-family: "Rum Raisin", sans-serif;

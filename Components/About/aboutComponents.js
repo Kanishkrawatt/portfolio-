@@ -22,7 +22,6 @@ export const AboutMe = styled.h1`
   letter-spacing: 0.125rem;
   font-size: 3rem;
   transition: 1s all ease;
-
   &::selection {
     background-color: transparent;
   }
