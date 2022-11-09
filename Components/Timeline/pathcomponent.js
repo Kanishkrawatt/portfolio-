@@ -7,8 +7,11 @@ export const MyPathsContainer = styled.div`
   justify-content: center;
   min-height: 100vh;
   flex-direction: column;
-  width: 100vw;
-  background-color: #afb4ff;
+  width: 100%;
+  background-image: url("./PageImg/TimeLine.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat ;
   align-items: center;
   padding-top: 5rem;
 `;

@@ -86,9 +86,9 @@ export const ProjectMain = styled.div`
 `;
 
 export const ProjectTitle = styled.h1`
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bolder;
-  letter-spacing: 0.25rem;
+  letter-spacing: 0.125rem;
   margin-top: 2rem;
   transition: 1s all ease;
   font-family: "Rum Raisin", sans-serif;
