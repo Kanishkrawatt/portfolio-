@@ -25,7 +25,8 @@
     "react-tsparticles": "^2.2.2",
     "styled-components": "^5.3.5",
     "tsparticles": "^2.2.2",
-    "typewriter-effect": "^2.19.0"
+    "typewriter-effect": "^2.19.0",
+    "vercel": "^28.4.17"
   },
   "devDependencies": {
     "eslint": "8.22.0",
