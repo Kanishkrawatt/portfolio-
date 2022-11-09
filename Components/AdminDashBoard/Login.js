@@ -17,6 +17,16 @@ export const Page = styled.div`
   &::selection{
     background-color: transparent;
   }
+  @media (max-width: 1400px) {
+    width:30%;
+  }
+  @media (max-width :1000px){
+    width: 40%;
+  }
+  @media (max-width: 800px) {
+    width:60%;
+  }
+
 `;
 export const InputBox = styled.input`
   padding: 1rem;
