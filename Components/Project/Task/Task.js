@@ -100,7 +100,7 @@ function Task(props) {
         <ShowMore
           color="#FFEEAF"
           onClick={() =>
-            Data.length == item ? setItem(3) : setItem(Data.length)
+            Data.length == item ? setItem(3) : setItem(4)
           }
         >
           {Data.length == item ? "Show Less" : "Show More"}
