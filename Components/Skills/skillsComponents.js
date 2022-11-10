@@ -31,6 +31,12 @@ export const Lang = styled.div`
   min-width: 15vw;
   border-radius: 2rem;
   background-color: #fad9e6;
+  &::selection{
+    background-color: transparent;
+  }
+  @media (max-width:800px){
+    width:70vw;
+  }
 `;
 
 export const SkillsContainer = styled(flexCenter)`
@@ -42,4 +48,7 @@ export const LangImg = styled.div`
   height: 3rem;
   width:3rem;
   border-radius: 10rem;
+  &::selection{
+    background-color: transparent;
+  }
 `
