@@ -8,44 +8,46 @@ import {
 import Image from "next/image";
 import { flexCenter } from "../../styles/flexCenter";
 import styled from "styled-components";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 export const FlexCenter = styled(flexCenter)`
-  gap: 2rem;
+  gap: 4rem;
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 const Skills = (props) => {
   let [item, setItem] = useState(3);
   // let data = props.data;
   let data = [
-    { name: "Next Js", icon: "Nextjs" },
-    { name: "Mongo Db", icon: "Mongodb" },
-    { name: "FireBase", icon: "Firebase" },
-    { name: "JavaScript", icon: "Javascript" },
-    { name: "Node Js", icon: "Nodejs" },
-    { name: "HTML", icon: "HTML5" },
-    { name: "React", icon: "React" },
-    { name: "TypeScript", icon: "Typescript" },
-    { name: "CSS   ", icon: "CSS3" },
-    { name: "Express Js", icon: "Expressjs" },
-    { name: "Styled-Component", icon: "Styledcomponent" },
-    { name: "GIT", icon: "Git" },
-
+    { name: "Next Js", icon: "Nextjs.svg" },
+    { name: "Mongo Db", icon: "Mongodb.png" },
+    { name: "FireBase", icon: "Firebase.svg" },
+    { name: "JavaScript", icon: "Javascript.svg" },
+    { name: "Node Js", icon: "Nodejs.svg" },
+    { name: "HTML", icon: "HTML5.svg" },
+    { name: "React", icon: "React.svg" },
+    { name: "TypeScript", icon: "Typescript.svg" },
+    { name: "CSS   ", icon: "CSS3.svg" },
+    { name: "Express Js", icon: "Expressjs.svg" },
+    { name: "Styled-Component", icon: "Styledcomponent.png" },
+    { name: "GIT", icon: "Git.svg" },
   ];
   let n = data.length;
   let data1 = data.splice(0, Math.ceil(n / 2));
   let data2 = data.splice(0, Math.ceil(n / 2));
   return (
-    <section id="Home">
+    <section id="Skills">
       <SkillsPage>
         <Title>Skills</Title>
-        <FlexCenter style={{height:"auto"}}>
+        <FlexCenter style={{ height: "auto" }}>
           <SkillsContainer>
             {data1.slice(0, item).map((item, index) => {
               return (
                 <Lang key={index}>
                   <LangImg>
                     <Image
-                      src={`/Skills/${item.icon}.png`}
+                      src={`/Skills/${item.icon}`}
                       alt="hey"
                       layout="fill"
                     ></Image>
@@ -61,7 +63,7 @@ const Skills = (props) => {
                 <Lang key={index}>
                   <LangImg>
                     <Image
-                      src={`/Skills/${item.icon}.png`}
+                      src={`/Skills/${item.icon}`}
                       alt="hey"
                       layout="fill"
                     ></Image>
@@ -73,7 +75,11 @@ const Skills = (props) => {
           </SkillsContainer>
         </FlexCenter>
         <Lang
-          style={{ marginTop: "2rem", width: "32vw",marginBottom:"13vh" }}
+          style={{
+            marginTop: "2rem",
+            width: "32vw",
+            marginBottom: "13vh",
+          }}
           onClick={() => {
             n / 2 == item ? setItem(3) : setItem(n / 2);
           }}
