@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 export const Cursor = styled.div`
     height: 2rem;
@@ -8,6 +8,9 @@ export const Cursor = styled.div`
     /* transition: translate3d 2s; */
     background-color: #BCEAD5;
     z-index: 1000;
+    @media (max-width:767px){
+        display: none;
+    }
 `
 const Index = ()=>{
     let CursorPos = useRef(null)
