@@ -24,7 +24,7 @@ export default function Home(props) {
   
   return (
     <>
-      <Mouse />
+      {/* <Mouse /> */}
       <Nevbar data={NevbarData} />
       <PageAnimation />
       <Homepage data={HomePageData} />

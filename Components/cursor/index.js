@@ -6,8 +6,9 @@ export const Cursor = styled.div`
     border-radius: 10rem;
     position:  fixed;
     /* transition: translate3d 2s; */
-    background-color: #BCEAD5;
+    background-color: yellow;
     z-index: 1000;
+    mix-blend-mode: difference;  
     @media (max-width:767px){
         display: none;
     }
