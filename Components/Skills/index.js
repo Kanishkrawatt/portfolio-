@@ -6,6 +6,7 @@ import {
   LangImg,
 } from "./skillsComponents";
 import Image from "next/image";
+import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
 import { flexCenter } from "../../styles/flexCenter";
 import styled from "styled-components";
 import { useState, useEffect } from "react";
@@ -36,12 +37,14 @@ const Skills = (props) => {
   let n = data.length;
   let data1 = data.splice(0, Math.ceil(n / 2));
   let data2 = data.splice(0, Math.ceil(n / 2));
+  const ScrollElements = ["SkillsTitle", "Skillcont1", "Skillcont2", "Skillcont3"];
+  ScrollAnimation(ScrollElements);
   return (
     <section id="Skills">
       <SkillsPage>
-        <Title>Skills</Title>
+        <Title id="SkillsTitle">Skills</Title>
         <FlexCenter style={{ height: "auto" }}>
-          <SkillsContainer>
+          <SkillsContainer id="Skillcont1">
             {data1.slice(0, item).map((item, index) => {
               return (
                 <Lang key={index}>
@@ -57,7 +60,7 @@ const Skills = (props) => {
               );
             })}
           </SkillsContainer>
-          <SkillsContainer>
+          <SkillsContainer id="Skillcont2">
             {data2.slice(0, item).map((item, index) => {
               return (
                 <Lang key={index}>
@@ -74,7 +77,7 @@ const Skills = (props) => {
             })}
           </SkillsContainer>
         </FlexCenter>
-        <Lang
+        <Lang id="Skillcont3"
           style={{
             marginTop: "2rem",
             width: "32vw",
