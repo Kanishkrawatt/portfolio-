@@ -30,6 +30,7 @@ export const Lang = styled.div`
   font-family:  "Rum Raisin", sans-serif;
   min-width: 15vw;
   border-radius: 2rem;
+  transition: 1s all ease;
   background-color: #fad9e6;
   &::selection{
     background-color: transparent;
@@ -42,12 +43,15 @@ export const Lang = styled.div`
 export const SkillsContainer = styled(flexCenter)`
   gap: 4rem;
   flex-direction: column;
+  transition: 1s all ease;
+
 `;
 export const LangImg = styled.div`
   position: relative;
   height: 3rem;
   width:3rem;
   border-radius: 10rem;
+  transition: 1s all ease;
   &::selection{
     background-color: transparent;
   }
