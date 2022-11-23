@@ -50,6 +50,7 @@ export const PathHeader = styled.div`
   width: 180px;
   margin-bottom: 5rem;
   border: 1px solid #9c9efe;
+  border-radius: 1rem;
   background-color: #9c9efe;
   z-index: 10;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -79,6 +80,7 @@ export const Timeline_container_project_container = styled.div`
 export const Timeline_container_project = styled.button`
   padding: 0.75rem 1.75rem;
   background-color: #afb4ff;
+  border-radius: 1rem;
   border: #afb4ff;
   cursor: pointer;
 `;
@@ -89,6 +91,7 @@ export const TimeLine_Heading = styled.h1`
   margin: 0px;
   justify-content: center;
   height: 5rem;
+  border-radius: 1rem 1rem 0 0;
   align-items: center;
   font-family: "Rum Raisin", sans-serif;
 `;
@@ -123,6 +126,7 @@ export const Timeline_container = styled.div`
   background-color: white;
   text-align: center;
   border: 1px solid #9c9efe;
+  border-radius: 1rem;
   background-color: #9c9efe;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
