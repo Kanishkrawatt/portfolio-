@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Head>
+      <Head lang="hindi">
         <title>| Kanishk</title>
         <meta
           name="description"

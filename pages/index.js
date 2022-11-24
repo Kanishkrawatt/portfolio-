@@ -23,7 +23,7 @@ export default function Home(props) {
   // PageColorAnimation();
   
   return (
-    <>
+    <div /*style={{cursor:"none"}}*/>
       {/* <Mouse /> */}
       <Nevbar data={NevbarData} />
       <PageAnimation />
@@ -34,7 +34,7 @@ export default function Home(props) {
       <Path data={TimeLineData} />
       <Contact />
       <Foot />
-    </>
+    </div>
   );
 }
 

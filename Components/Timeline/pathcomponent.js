@@ -8,6 +8,7 @@ export const MyPathsContainer = styled.div`
   min-height: 100vh;
   flex-direction: column;
   width: 100%;
+  background-color: #afb4ff;
   background-image: url("./PageImg/TimeLine.svg");
   background-position: center;
   background-size: cover;

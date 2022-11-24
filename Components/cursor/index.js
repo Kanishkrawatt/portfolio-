@@ -5,8 +5,8 @@ export const Cursor = styled.div`
     width: 2rem;
     border-radius: 10rem;
     position:  fixed;
-    /* transition: translate3d 2s; */
-    background-color: yellow;
+    /* transition: all 2s; */
+    background-color:${prop=>prop.color};
     z-index: 1000;
     mix-blend-mode: difference;  
     @media (max-width:767px){
@@ -25,7 +25,7 @@ const Index = ()=>{
           return()=>{}
         })
         ,[]})
-    return(<Cursor ref={CursorPos}></Cursor>)
+    return(<Cursor color='red' ref={CursorPos}></Cursor>)
 }
 
 export default Index

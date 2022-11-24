@@ -69,7 +69,7 @@ export const ProjectMain = styled.div`
   min-height: 120vh;
 
   height: auto;
-  /* background-color: #ffd07f; */
+  background-color: #ffd07f;
   background-image: url("/PageImg/Project.svg");
   background-repeat: no-repeat;
   background-position: center;

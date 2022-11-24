@@ -23,6 +23,7 @@
     "react-icons": "^4.4.0",
     "react-lottie": "^1.2.3",
     "react-tsparticles": "^2.2.2",
+    "sharp": "^0.31.2",
     "styled-components": "^5.3.5",
     "tsparticles": "^2.2.2",
     "typewriter-effect": "^2.19.0"

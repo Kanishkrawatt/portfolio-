@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { flexCenter } from "../../styles/flexCenter";
 
 export const MainInfo = styled(flexCenter)`
-  /* background-color: #9ED2C6; */
+  background-color: #9ED2C6;
   background-image: url("/PageImg/Home.svg");
   background-repeat: no-repeat;
   background-position: center;

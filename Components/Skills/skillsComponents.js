@@ -7,6 +7,7 @@ export const SkillsPage = styled(flexCenter)`
   min-height: 120vh;
   height: auto;
   width: 100%;
+  background-color: #e4aec5;
   background-image: url("./PageImg/SkillsPage.svg");
   background-repeat: no-repeat;
   background-position: center;
