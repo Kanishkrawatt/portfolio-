@@ -4,7 +4,7 @@ import { flexCenter } from "../../styles/flexCenter";
 export const AboutPageContainer = styled(flexCenter)`
   height: 100vh;
   width: 100vw;
-  /* background-color: #c1d5a4; */
+  background-color: #c1d5a4;
   background-image: url("/PageImg/AboutPage.svg");
   background-repeat: no-repeat;
   background-position: center;
