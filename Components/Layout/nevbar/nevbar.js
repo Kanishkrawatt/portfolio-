@@ -37,7 +37,8 @@ function Nevbar(props) {
                 height="25px"
                 alt="img"
                 width="25px"
-              />{" "}
+                priority
+              />
               {content.Name}
             </Nevbarli>
           </Link>
