@@ -31,7 +31,17 @@ export default class MyDocument extends Document {
     return (
       <Html className="scroll-smooth" style={{ scrollBehavior: "smooth" }}>
       <Head>
-        <link rel="preload" href="https://fonts.googleapis.com" />
+        <meta
+          name="description"
+          content="I'm a Full Stack Developer,Programmer from India. I have great intrest coding.  "
+        />
+        <meta
+          name="keywords"
+          content="Kanishk, Rawat, Portfolio, ikanishk, Kanishkrawatt,KANISHK,k_a_n_i_s_h_k_r_a_w_a_t,KANISHKRAWAT"
+        />
+        <meta name="author" content="Kanishk rawat" />
+        <link rel="icon" href="/logo.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Libre+Barcode+39+Text&family=Megrim&family=Rum+Raisin&display=swap"

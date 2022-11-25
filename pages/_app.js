@@ -13,18 +13,8 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-      <Head lang="hindi">
+      <Head>
         <title>| Kanishk</title>
-        <meta
-          name="description"
-          content="I'm a Full Stack Developer,Programmer from India. I have great intrest coding.  "
-        />
-        <meta
-          name="keywords"
-          content="Kanishk, Rawat, Portfolio, ikanishk, Kanishkrawatt"
-        />
-        <meta name="author" content="Kanishk rawat" />
-        <link rel="icon" href="/logo.png" />
       </Head>
       {!loading ? <Component {...pageProps} /> : <OnLoadAnimation />}
     </>
