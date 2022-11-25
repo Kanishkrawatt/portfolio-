@@ -8,7 +8,7 @@ export const ContactPage = styled(flexCenter)`
   background-color: #FFE69A;
   z-index: 20;
   @media (max-width: 992px) {
-    height: 150vh;
+    height: 100vh;
     padding: 8vh 0;
   }
 `;
