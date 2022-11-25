@@ -69,6 +69,7 @@ const Skills = (props) => {
                       src={`/Skills/${item.icon}`}
                       alt="hey"
                       layout="fill"
+                      priority
                     ></Image>
                   </LangImg>
                   {item.name}
