@@ -28,5 +28,3 @@ If you find anything buggy you can report it to me.
 9. Google Analytics
 
 <br>
-
-## Designs can be found at [Figma](https://www.figma.com/file/TENsqK8xUvsjlXxPgVdETr/Personal-Portfolio?node-id=0%3A1)
