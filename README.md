@@ -19,12 +19,10 @@ If you find anything buggy you can report it to me.
 
 1. Next JS
 2. Firebase
-3. 
-4. React Helmet
+3. TsParticles
+4. Axios
 5. Styled Components
 6. Lottie Animation
-7. Email JS
-8. Hotjar
-9. Google Analytics
+7. React icons
 
 <br>
