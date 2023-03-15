@@ -1,7 +1,5 @@
-/* eslint-disable @next/next/no-page-custom-font */
 import db from "../db";
 import Foot from "../Components/Layout/foot/foot";
-import Sidebar from "../Components/Props/sidemenu";
 import About from "../Components/About/about";
 import Path from "../Components/Timeline/path";
 import Nevbar from "../Components/Layout/nevbar/nevbar";
@@ -9,10 +7,8 @@ import Homepage from "../Components/HomePage/Homepage";
 import PageAnimation from "../Components/PageAnimation/page";
 import Contact from "../Components/Contact";
 import Project from "../Components/Project/Project";
-import { useState, useEffect, useRef } from "react";
-import PageColorAnimation from "../Components/PageAnimation/pageColor";
+import { useState } from "react";
 import Skills from "../Components/Skills";
-import Mouse from "../Components/cursor";
 export default function Home(props) {
   const [data, setdata] = useState(JSON.parse(props.Data));
   let HomePageData = JSON.stringify(data.HomePageData);
@@ -20,11 +16,12 @@ export default function Home(props) {
   let TimeLineData = JSON.stringify(data.TimeLineData);
   let NevbarData = JSON.stringify(data.NevbarData);
   let ProjectPageData = JSON.stringify(data.ProjectData);
-  // PageColorAnimation();
-  
+  const mainStyle = {
+    scrollBehavior: "smooth",
+  }
+    
   return (
-    <div /*style={{cursor:"none"}}*/>
-      {/* <Mouse /> */}
+    <div style={mainStyle}>
       <Nevbar data={NevbarData} />
       <PageAnimation />
       <Homepage data={HomePageData} />
