@@ -25,7 +25,7 @@ function Nevbar(props) {
     <NevbarUl>
       {JSON.parse(data).map((content, index) => {
         return (
-          <Link key={index} href={content.Link}>
+          <Link key={index} style={{textDecoration:"none",color:"black"}} href={content.Link}>
             <Nevbarli
               onClick={() => {
                 setcheck(index);
@@ -34,9 +34,9 @@ function Nevbar(props) {
             >
               <Image
                 src={`/icons8-${content.img}-32.png`}
-                height="25px"
+                height={25}
                 alt="img"
-                width="25px"
+                width={25}
                 priority
               />
               {content.Name}
