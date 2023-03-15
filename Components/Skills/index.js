@@ -116,7 +116,7 @@ const Skills = (props) => {
           id="Skillcont3"
           style={{}}
           onClick={() => {
-            n / 2 == item ? setItem(3) : setItem(n / 2);
+            n / 2 == item ? setItem(isMobile?2:3) : setItem(n / 2);
           }}
         >
           {" "}
