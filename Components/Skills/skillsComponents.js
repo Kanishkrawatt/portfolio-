@@ -13,6 +13,10 @@ export const SkillsPage = styled(flexCenter)`
   background-position: center;
   background-size: cover;
   flex-direction: column;
+  @media (max-width: 800px) {
+    min-height: 140vh;
+  }
+    
 `;
 export const Title = styled(AboutMe)`
   font-size: 3rem;
@@ -27,7 +31,7 @@ export const Lang = styled.div`
   align-items: center;
   justify-content: space-evenly;
   min-height: 10vh;
-  width: 15vw;
+  width: "32vw";  
   font-family:  "Rum Raisin", sans-serif;
   min-width: 15vw;
   border-radius: 2rem;
