@@ -25,7 +25,7 @@ function About(props) {
           <AboutImg id="AboutImg" src="/ProfileImg.png" alt="img" />
           <AboutPara id="AboutPara">{JSON.parse(data).AboutPara}</AboutPara>
         </AboutContent>
-        <Link href="/resume-min.png">
+        <Link style={{textDecoration:"none",color:"black"}} href="/resume-min.png">
           <ShowMore id="Resume" color="#D9F8C4">
             Resume
           </ShowMore>

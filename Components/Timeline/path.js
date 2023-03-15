@@ -42,7 +42,7 @@ function Path(props) {
             return (
               <Timeline id={`Timeline${index}`} key={index}>
                 {path == -1 ? (
-                  <Link href="#Timeline">
+                  <Link style={{textDecoration:"none",color:"black"}} href="#Timeline">
                     <PathHeader onClick={() => ShowPath(index)}>
                       {content.PathHeader}
                     </PathHeader>

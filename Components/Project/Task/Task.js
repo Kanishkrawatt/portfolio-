@@ -89,7 +89,7 @@ function Task(props) {
                 <Button
                   colortheme={ColorThemeArr[index % ColorThemeArr.length]}
                 >
-                  <Anchor href={content.More}>More..</Anchor>
+                  <Anchor style={{textDecoration:"none",color:"black"}} href={content.More}>More..</Anchor>
                 </Button>
               </Buttondiv>
             </Maindiv>
