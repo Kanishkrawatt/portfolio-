@@ -9,13 +9,13 @@ import Contact from "../Components/Contact";
 import Project from "../Components/Project/Project";
 import { useState } from "react";
 import Skills from "../Components/Skills";
-export default function Home(props) {
-  const [data, setdata] = useState(JSON.parse(props.Data));
-  let HomePageData = JSON.stringify(data.HomePageData);
-  let AboutPageData = JSON.stringify(data.AboutPageData);
-  let TimeLineData = JSON.stringify(data.TimeLineData);
-  let NevbarData = JSON.stringify(data.NevbarData);
-  let ProjectPageData = JSON.stringify(data.ProjectData);
+export default function Home({Data}) {
+  const AboutPageData = Data[0]
+  const HomePageData = Data[1]
+  const NevbarData = Data[2]["NevbarData"]
+  const ProjectPageData = Data[3]["ProjectData"]
+  const SkillsData = Data[4]["SkillsData"]
+  const TimeLineData = Data[5]["TimeLineData"]
   const mainStyle = {
     scrollBehavior: "smooth",
   }
@@ -26,7 +26,7 @@ export default function Home(props) {
       <PageAnimation />
       <Homepage data={HomePageData} />
       <About data={AboutPageData} />
-      <Skills data={[]}/>
+      <Skills data={SkillsData}/>
       <Project data={ProjectPageData} />
       <Path data={TimeLineData} />
       <Contact />
@@ -36,9 +36,8 @@ export default function Home(props) {
 }
 
 export async function getStaticProps() {
-  let data = await db.collection("data").get();
-  let Alldata = data.docs.map((entry) => entry.data());
-  const Data = Alldata[0].data;
+  const Dataref = await db.collection("Data").get();
+  let Data = Dataref.docs.map((entry) => entry.data());
   return {
     props: { Data }, // will be passed to the page component as props
     revalidate: 1,
