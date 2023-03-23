@@ -3,16 +3,15 @@ import { MainInfo, Name, Shortinfo } from "./HomepageComponent";
 
 import Typewriter from "typewriter-effect";
 
-function Homepage(props) {
-  const [Data, setData] = useState(props.data);
+function Homepage({data}) {
   return (
     <section id="Home">
       <MainInfo>
-        <Name>{JSON.parse(Data).Name}</Name>
+        <Name>{data.Name}</Name>
         <Shortinfo>
           <Typewriter
             options={{
-              strings: JSON.parse(Data).Shortinfo,
+              strings: data.Shortinfo,
               autoStart: true,
               pauseFor: 0,
               loop: true,
