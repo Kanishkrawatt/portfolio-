@@ -1,5 +1,4 @@
-
-# Personal Portfolio Website 
+# Personal Portfolio Website
 
 - [Live Demo](https://ikanishk.me/)
 
@@ -8,13 +7,13 @@ I would suggest to read [README.md](./README.md) first and then proceed with exp
 
 ## Screenshots
 
-![Homepage](/screenshots/1.png 'Homepage')
-![About](/screenshots/2.png 'About')
-![Skills](/screenshots/3.png 'Skills')
-![Projects](/screenshots/4.png 'Projects')
-![Timeline](/screenshots/5.png 'Timeline')
-![Timeline](/screenshots/6.png 'Timeline')
-![Contact](/screenshots/7.png 'Contact')
+![Homepage](/screenshots/1.png "Homepage")
+![About](/screenshots/2.png "About")
+![Skills](/screenshots/3.png "Skills")
+![Projects](/screenshots/4.png "Projects")
+![Timeline](/screenshots/5.png "Timeline")
+![Timeline](/screenshots/6.png "Timeline")
+![Contact](/screenshots/7.png "Contact")
 <br>
 
 ## Tools/Technologies Used

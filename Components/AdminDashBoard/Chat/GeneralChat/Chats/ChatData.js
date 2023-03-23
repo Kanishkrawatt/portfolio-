@@ -6,11 +6,11 @@ import {
   SenderInfo,
   SenderName,
   Chatdiv,
-  Chat
+  Chat,
 } from "../GeneralChatComponents";
 
 function ChatData(props) {
-  let Data =props.data;
+  let Data = props.data;
   return (
     <Textdiv>
       {Data.map((content, index) => {
@@ -18,7 +18,9 @@ function ChatData(props) {
           <Textarea key={index}>
             <SenderInfo>
               <SenderImg src="/user.png" />
-              <SenderName>{content.FirstName} {content.LastName}</SenderName>
+              <SenderName>
+                {content.FirstName} {content.LastName}
+              </SenderName>
             </SenderInfo>
             <Chatdiv>
               <Chat>{content.Message}</Chat>

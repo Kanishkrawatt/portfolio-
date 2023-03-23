@@ -1,15 +1,13 @@
-import React from 'react'
-import AdminDashBoard from "../../Components/AdminDashBoard/Admin"
-import db from '../../db'
+import React from "react";
+import AdminDashBoard from "../../Components/AdminDashBoard/Admin";
+import db from "../../db";
 
 const index = (props) => {
   let Data = props.Data;
-  return (
-    <AdminDashBoard Data={Data} />
-  )
-}
+  return <AdminDashBoard Data={Data} />;
+};
 
-export default index
+export default index;
 
 export async function getStaticProps() {
   let data = await db.collection("contact").get();

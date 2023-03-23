@@ -5,7 +5,7 @@ export const ContactPage = styled(flexCenter)`
   height: 100vh;
   width: 100vw;
   align-items: flex-end;
-  background-color: #FFE69A;
+  background-color: #ffe69a;
   z-index: 20;
   @media (max-width: 992px) {
     height: 100vh;

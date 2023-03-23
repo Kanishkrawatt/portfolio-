@@ -14,7 +14,7 @@ import {
 import Task from "./Task/Task";
 import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
 
-function Project({data}) {
+function Project({ data }) {
   const ScrollElements = ["ProjectTit"];
   ScrollAnimation(ScrollElements);
   return (

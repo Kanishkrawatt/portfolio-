@@ -16,7 +16,6 @@ export const SkillsPage = styled(flexCenter)`
   @media (max-width: 800px) {
     min-height: 140vh;
   }
-    
 `;
 export const Title = styled(AboutMe)`
   font-size: 3rem;
@@ -31,17 +30,17 @@ export const Lang = styled.div`
   align-items: center;
   justify-content: space-evenly;
   min-height: 10vh;
-  width: "32vw";  
-  font-family:  "Rum Raisin", sans-serif;
+  width: "32vw";
+  font-family: "Rum Raisin", sans-serif;
   min-width: 25vw;
   border-radius: 2rem;
   transition: 1s all ease;
   background-color: #fad9e6;
-  &::selection{
+  &::selection {
     background-color: transparent;
   }
-  @media (max-width:800px){
-    width:70vw;
+  @media (max-width: 800px) {
+    width: 70vw;
   }
 `;
 
@@ -49,15 +48,14 @@ export const SkillsContainer = styled(flexCenter)`
   gap: 4rem;
   flex-direction: column;
   transition: 1s all ease;
-
 `;
 export const LangImg = styled.div`
   position: relative;
   height: 3rem;
-  width:3rem;
+  width: 3rem;
   border-radius: 10rem;
   transition: 1s all ease;
-  &::selection{
+  &::selection {
     background-color: transparent;
   }
-`
+`;

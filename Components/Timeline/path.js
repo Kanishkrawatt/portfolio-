@@ -17,7 +17,7 @@ import {
 
 import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
 
-function Path({data}) {
+function Path({ data }) {
   let [path, setpath] = useState(-1);
   const ShowPath = (index) => {
     if (path != index) {
@@ -27,8 +27,8 @@ function Path({data}) {
     }
   };
   const ScrollElements = ["Timelines"];
-  for(let i=0;i<data.length;i++){
-    ScrollElements.push(`Timeline${i}`)
+  for (let i = 0; i < data.length; i++) {
+    ScrollElements.push(`Timeline${i}`);
   }
 
   ScrollAnimation(ScrollElements);
@@ -41,7 +41,10 @@ function Path({data}) {
             return (
               <Timeline id={`Timeline${index}`} key={index}>
                 {path == -1 ? (
-                  <Link style={{textDecoration:"none",color:"black"}} href="#Timeline">
+                  <Link
+                    style={{ textDecoration: "none", color: "black" }}
+                    href="#Timeline"
+                  >
                     <PathHeader onClick={() => ShowPath(index)}>
                       {content.PathHeader}
                     </PathHeader>

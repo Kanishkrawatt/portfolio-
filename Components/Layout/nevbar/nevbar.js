@@ -24,7 +24,11 @@ function Nevbar({ data }) {
     <NevbarUl>
       {data.map((content, index) => {
         return (
-          <Link key={index} style={{textDecoration:"none",color:"black"}} href={content.Link}>
+          <Link
+            key={index}
+            style={{ textDecoration: "none", color: "black" }}
+            href={content.Link}
+          >
             <Nevbarli
               onClick={() => {
                 setcheck(index);

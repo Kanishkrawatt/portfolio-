@@ -30,7 +30,7 @@ export const FlexDiv = styled.div`
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  @media (max-width:1017px){
+  @media (max-width: 1017px) {
     flex-direction: column;
     gap: 0;
   }
@@ -84,12 +84,12 @@ const Admin = (props) => {
             <ShowMore
               color="#E1FFEE"
               style={{
-                display:"flex",
-                flexDirection:"column",
+                display: "flex",
+                flexDirection: "column",
                 fontSize: "small",
-                width:"70vw",
+                width: "70vw",
                 height: "auto",
-                margin:"0",
+                margin: "0",
                 textAlign: "center",
               }}
             >

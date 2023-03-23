@@ -3,7 +3,7 @@ import { MainInfo, Name, Shortinfo } from "./HomepageComponent";
 
 import Typewriter from "typewriter-effect";
 
-function Homepage({data}) {
+function Homepage({ data }) {
   return (
     <section id="Home">
       <MainInfo>

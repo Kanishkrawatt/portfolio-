@@ -21,7 +21,7 @@ import {
   ToolsName,
 } from "./TaskComponents";
 
-function Task({data}) {
+function Task({ data }) {
   const [item, setItem] = React.useState(3);
   const ScrollElements = [];
   data.forEach((elem, index) => {
@@ -88,7 +88,12 @@ function Task({data}) {
                 <Button
                   colortheme={ColorThemeArr[index % ColorThemeArr.length]}
                 >
-                  <Anchor style={{textDecoration:"none",color:"black"}} href={content.More}>More..</Anchor>
+                  <Anchor
+                    style={{ textDecoration: "none", color: "black" }}
+                    href={content.More}
+                  >
+                    More..
+                  </Anchor>
                 </Button>
               </Buttondiv>
             </Maindiv>
@@ -98,9 +103,7 @@ function Task({data}) {
       {data.length > 3 && (
         <ShowMore
           color="#FFEEAF"
-          onClick={() =>
-            data.length == item ? setItem(3) : setItem(4)
-          }
+          onClick={() => (data.length == item ? setItem(3) : setItem(4))}
         >
           {data.length == item ? "Show Less" : "Show More"}
         </ShowMore>

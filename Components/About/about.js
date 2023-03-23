@@ -13,7 +13,7 @@ import { ShowMore } from "../Project/Task/TaskComponents";
 import Link from "next/link";
 import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
 
-function About({data}) {
+function About({ data }) {
   const ScrollElements = ["AboutMe", "AboutImg", "AboutPara", "Resume"];
   ScrollAnimation(ScrollElements);
   return (
@@ -24,7 +24,10 @@ function About({data}) {
           <AboutImg id="AboutImg" src="/ProfileImg.png" alt="img" />
           <AboutPara id="AboutPara">{data.AboutPara}</AboutPara>
         </AboutContent>
-        <Link style={{textDecoration:"none",color:"black"}} href="/resume-min.png">
+        <Link
+          style={{ textDecoration: "none", color: "black" }}
+          href="/resume-min.png"
+        >
           <ShowMore id="Resume" color="#D9F8C4">
             Resume
           </ShowMore>

@@ -17,28 +17,28 @@ export const FlexCenter = styled(flexCenter)`
   }
 `;
 const ShowMore = styled.div`
-height: 10vh;
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-evenly;
-min-height: 10vh;
-min-width: 15vw;
-margin: 4rem 0 13vh 0;
-width: 32vw;  
-font-family:  "Rum Raisin", sans-serif;
-border-radius: 2rem;
-transition: 1s all ease;
-background-color: #fad9e6;
-@media (max-width: 480px) {
-  width: 70vw;
-  min-width:30vw;
-  font-size: 1.5rem;
-}
-  
-&::selection{
-  background-color: transparent;
-}
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  min-height: 10vh;
+  min-width: 15vw;
+  margin: 4rem 0 13vh 0;
+  width: 32vw;
+  font-family: "Rum Raisin", sans-serif;
+  border-radius: 2rem;
+  transition: 1s all ease;
+  background-color: #fad9e6;
+  @media (max-width: 480px) {
+    width: 70vw;
+    min-width: 30vw;
+    font-size: 1.5rem;
+  }
+
+  &::selection {
+    background-color: transparent;
+  }
 `;
 import { useMediaQuery } from "../Hooks/useMediaQuery";
 const Skills = (props) => {
@@ -51,21 +51,21 @@ const Skills = (props) => {
       setItem(3);
     }
   }, [isMobile]);
-  
+
   // let data = props.data;
   let data = [
-    { "name": "Next Js", "icon": "Nextjs.svg" },
-    { "name": "Mongo Db", "icon": "Mongodb.png" },
-    { "name": "FireBase", "icon": "Firebase.svg" },
-    { "name": "JavaScript", "icon": "Javascript.svg" },
-    { "name": "Node Js", "icon": "Nodejs.svg" },
-    { "name": "HTML", "icon": "HTML5.svg" },
-    { "name": "React", "icon": "React.svg" },
-    { "name": "TypeScript", "icon": "Typescript.svg" },
-    { "name": "CSS   ", "icon": "CSS3.svg" },
-    { "name": "Express Js", "icon": "Expressjs.svg" },
-    { "name": "Styled-Component", "icon": "Styledcomponent.png" },
-    { "name": "GIT", "icon": "Git.svg" },
+    { name: "Next Js", icon: "Nextjs.svg" },
+    { name: "Mongo Db", icon: "Mongodb.png" },
+    { name: "FireBase", icon: "Firebase.svg" },
+    { name: "JavaScript", icon: "Javascript.svg" },
+    { name: "Node Js", icon: "Nodejs.svg" },
+    { name: "HTML", icon: "HTML5.svg" },
+    { name: "React", icon: "React.svg" },
+    { name: "TypeScript", icon: "Typescript.svg" },
+    { name: "CSS   ", icon: "CSS3.svg" },
+    { name: "Express Js", icon: "Expressjs.svg" },
+    { name: "Styled-Component", icon: "Styledcomponent.png" },
+    { name: "GIT", icon: "Git.svg" },
   ];
   let n = data.length;
   let data1 = data.splice(0, Math.ceil(n / 2));
@@ -116,7 +116,7 @@ const Skills = (props) => {
           id="Skillcont3"
           style={{}}
           onClick={() => {
-            n / 2 == item ? setItem(isMobile?2:3) : setItem(n / 2);
+            n / 2 == item ? setItem(isMobile ? 2 : 3) : setItem(n / 2);
           }}
         >
           {" "}

@@ -59,14 +59,14 @@ export const UserInfo = () => {
 export const IsAdmin = () => {
   const [user] = useAuthState(auth);
   if (user !== null) {
-    const admin = [{username: "Kanishk rawat"}];
+    const admin = [{ username: "Kanishk rawat" }];
     // admin.forEach((a) => {
     //   if (user.displayName == a.username) {
     //     return 1;
     //   }
     // });
 
-    if(user.displayName===admin[0].username){
+    if (user.displayName === admin[0].username) {
       return 1;
     }
   }
