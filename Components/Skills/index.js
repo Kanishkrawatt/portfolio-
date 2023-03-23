@@ -25,7 +25,7 @@ const ShowMore = styled.div`
   min-height: 10vh;
   min-width: 15vw;
   margin: 4rem 0 13vh 0;
-  width: 32vw;
+  width: 32rem;
   font-family: "Rum Raisin", sans-serif;
   border-radius: 2rem;
   transition: 1s all ease;
