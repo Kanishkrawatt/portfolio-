@@ -33,7 +33,7 @@ export const Lang = styled.div`
   min-height: 10vh;
   width: "32vw";  
   font-family:  "Rum Raisin", sans-serif;
-  min-width: 15vw;
+  min-width: 25vw;
   border-radius: 2rem;
   transition: 1s all ease;
   background-color: #fad9e6;

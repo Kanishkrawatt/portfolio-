@@ -54,18 +54,18 @@ const Skills = (props) => {
   
   // let data = props.data;
   let data = [
-    { name: "Next Js", icon: "Nextjs.svg" },
-    { name: "Mongo Db", icon: "Mongodb.png" },
-    { name: "FireBase", icon: "Firebase.svg" },
-    { name: "JavaScript", icon: "Javascript.svg" },
-    { name: "Node Js", icon: "Nodejs.svg" },
-    { name: "HTML", icon: "HTML5.svg" },
-    { name: "React", icon: "React.svg" },
-    { name: "TypeScript", icon: "Typescript.svg" },
-    { name: "CSS   ", icon: "CSS3.svg" },
-    { name: "Express Js", icon: "Expressjs.svg" },
-    { name: "Styled-Component", icon: "Styledcomponent.png" },
-    { name: "GIT", icon: "Git.svg" },
+    { "name": "Next Js", "icon": "Nextjs.svg" },
+    { "name": "Mongo Db", "icon": "Mongodb.png" },
+    { "name": "FireBase", "icon": "Firebase.svg" },
+    { "name": "JavaScript", "icon": "Javascript.svg" },
+    { "name": "Node Js", "icon": "Nodejs.svg" },
+    { "name": "HTML", "icon": "HTML5.svg" },
+    { "name": "React", "icon": "React.svg" },
+    { "name": "TypeScript", "icon": "Typescript.svg" },
+    { "name": "CSS   ", "icon": "CSS3.svg" },
+    { "name": "Express Js", "icon": "Expressjs.svg" },
+    { "name": "Styled-Component", "icon": "Styledcomponent.png" },
+    { "name": "GIT", "icon": "Git.svg" },
   ];
   let n = data.length;
   let data1 = data.splice(0, Math.ceil(n / 2));
