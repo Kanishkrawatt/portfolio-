@@ -17,8 +17,7 @@ import {
 
 import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
 
-function Path(props) {
-  let data = JSON.parse(props.data);
+function Path({data}) {
   let [path, setpath] = useState(-1);
   const ShowPath = (index) => {
     if (path != index) {
@@ -28,9 +27,9 @@ function Path(props) {
     }
   };
   const ScrollElements = ["Timelines"];
-  data.forEach((content, index) => {
-    ScrollElements.push(`Timeline${index}`);
-  });
+  for(let i=0;i<data.length;i++){
+    ScrollElements.push(`Timeline${i}`)
+  }
 
   ScrollAnimation(ScrollElements);
   return (
