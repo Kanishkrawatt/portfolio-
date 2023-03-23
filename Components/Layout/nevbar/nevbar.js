@@ -4,8 +4,7 @@ import Image from "next/image";
 import { NevbarUl, Nevbarli } from "./nevbarComponents";
 import Link from "next/link";
 
-function Nevbar(props) {
-  let [data, setdata] = useState(props.data);
+function Nevbar({ data }) {
   const [check, setcheck] = useState(0);
   const toggleActive = {
     backgroundColor: "lightblue",
@@ -23,7 +22,7 @@ function Nevbar(props) {
   }
   return (
     <NevbarUl>
-      {JSON.parse(data).map((content, index) => {
+      {data.map((content, index) => {
         return (
           <Link key={index} style={{textDecoration:"none",color:"black"}} href={content.Link}>
             <Nevbarli
