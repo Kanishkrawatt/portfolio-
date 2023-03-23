@@ -13,8 +13,7 @@ import { ShowMore } from "../Project/Task/TaskComponents";
 import Link from "next/link";
 import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
 
-function About(props) {
-  let data = props.data;
+function About({data}) {
   const ScrollElements = ["AboutMe", "AboutImg", "AboutPara", "Resume"];
   ScrollAnimation(ScrollElements);
   return (
@@ -23,7 +22,7 @@ function About(props) {
         <AboutMe id="AboutMe">About</AboutMe>
         <AboutContent>
           <AboutImg id="AboutImg" src="/ProfileImg.png" alt="img" />
-          <AboutPara id="AboutPara">{JSON.parse(data).AboutPara}</AboutPara>
+          <AboutPara id="AboutPara">{data.AboutPara}</AboutPara>
         </AboutContent>
         <Link style={{textDecoration:"none",color:"black"}} href="/resume-min.png">
           <ShowMore id="Resume" color="#D9F8C4">
