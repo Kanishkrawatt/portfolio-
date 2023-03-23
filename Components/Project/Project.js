@@ -14,15 +14,14 @@ import {
 import Task from "./Task/Task";
 import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
 
-function Project(props) {
-  let Data = props.data;
+function Project({data}) {
   const ScrollElements = ["ProjectTit"];
   ScrollAnimation(ScrollElements);
   return (
     <section id="Project">
       <ProjectMain>
         <ProjectTitle id="ProjectTit">PROJECTS</ProjectTitle>
-        <Task data={Data} />
+        <Task data={data} />
       </ProjectMain>
     </section>
   );

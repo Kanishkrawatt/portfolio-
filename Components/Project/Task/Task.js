@@ -21,11 +21,10 @@ import {
   ToolsName,
 } from "./TaskComponents";
 
-function Task(props) {
+function Task({data}) {
   const [item, setItem] = React.useState(3);
-  let Data = JSON.parse(props.data);
   const ScrollElements = [];
-  Data.forEach((elem, index) => {
+  data.forEach((elem, index) => {
     ScrollElements.push(`Task${index}`);
   });
   ScrollAnimation(ScrollElements);
@@ -43,7 +42,7 @@ function Task(props) {
   return (
     <>
       <TaskContainer>
-        {Data.slice(0, item).map((content, index) => (
+        {data.slice(0, item).map((content, index) => (
           <TasksDiv
             id={`Task${index}`}
             key={index}
@@ -96,14 +95,14 @@ function Task(props) {
           </TasksDiv>
         ))}
       </TaskContainer>
-      {Data.length > 3 && (
+      {data.length > 3 && (
         <ShowMore
           color="#FFEEAF"
           onClick={() =>
-            Data.length == item ? setItem(3) : setItem(4)
+            data.length == item ? setItem(3) : setItem(4)
           }
         >
-          {Data.length == item ? "Show Less" : "Show More"}
+          {data.length == item ? "Show Less" : "Show More"}
         </ShowMore>
       )}
     </>
