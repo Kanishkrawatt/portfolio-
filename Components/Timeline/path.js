@@ -15,7 +15,6 @@ import {
   Close,
 } from "./pathcomponent";
 
-import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
 
 function Path({ data }) {
   let [path, setpath] = useState(-1);
@@ -26,12 +25,6 @@ function Path({ data }) {
       setpath(-1);
     }
   };
-  const ScrollElements = ["Timelines"];
-  for (let i = 0; i < data.length; i++) {
-    ScrollElements.push(`Timeline${i}`);
-  }
-
-  ScrollAnimation(ScrollElements);
   return (
     <section id="Path">
       <MyPathsContainer>
@@ -39,7 +32,7 @@ function Path({ data }) {
         <PathHeaderContainer>
           {data.map((content, index) => {
             return (
-              <Timeline id={`Timeline${index}`} key={index}>
+              <Timeline key={index}>
                 {path == -1 ? (
                   <Link
                     style={{ textDecoration: "none", color: "black" }}
