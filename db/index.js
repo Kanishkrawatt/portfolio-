@@ -1,24 +1,29 @@
-import admin from "firebase-admin";
-const serviceAccount = {
-  type: process.env.NEXT_PUBLIC_FB_type,
-  project_id: process.env.NEXT_PUBLIC_FB_project_id,
-  private_key_id: process.env.NEXT_PUBLIC_FB_private_key_id,
-  private_key: process.env.NEXT_PUBLIC_FB_private_key.replace(/\\n/g, "\n"),
-  client_email: process.env.NEXT_PUBLIC_FB_client_email,
-  client_id: process.env.NEXT_PUBLIC_FB_client_id,
-  auth_uri: process.env.NEXT_PUBLIC_FB_auth_uri,
-  token_uri: process.env.NEXT_PUBLIC_FB_token_uri,
-  auth_provider_x509_cert_url:
-    process.env.NEXT_PUBLIC_FB_auth_provider_x509_cert_url,
-  client_x509_cert_url: process.env.NEXT_PUBLIC_FB_client_x509_cert_url,
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+  apiKey: process.env.NEXT_PUBLIC_FB_apikey,
+  authDomain: process.env.NEXT_PUBLIC_FB_authDomain,
+  databaseURL: process.env.NEXT_PUBLIC_FB_databaseURL,
+  projectId: process.env.NEXT_PUBLIC_FB_projectId,
+  storageBucket: process.env.NEXT_PUBLIC_FB_storageBucket,
+  messagingSenderId: process.env.NEXT_PUBLIC_FB_messagingSenderId,
+  appId: process.env.NEXT_PUBLIC_FB_appId,
+  measurementId: process.env.NEXT_PUBLIC_FB_measurementId,
 };
-if (!admin.apps.length) {
-  try {
-    admin.initializeApp({
-      credential: admin.credential.cert(serviceAccount),
-    });
-  } catch (error) {
-    console.log("Firebase admin initialization error", error.stack);
-  }
-}
-export default admin.firestore();
+// Initialize Firebase
+
+const app = initializeApp(firebaseConfig);
+
+// Auth
+
+import { getAuth } from "firebase/auth";
+export const auth = getAuth();
+
+
+// Firestore
+
+import { getFirestore } from "firebase/firestore";
+const db = getFirestore(app);
+// Export db
+
+export default db;
