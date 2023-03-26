@@ -22,7 +22,7 @@ function Path({ data }) {
     return `path${index}`;
   });
 
-  ScrollAnimation([...ScrollElements,"Timelines"]);
+  ScrollAnimation(["Timelines"]);
   const ShowPath = (index) => {
     if (path != index) {
       setpath(index);
