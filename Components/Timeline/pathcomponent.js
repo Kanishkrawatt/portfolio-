@@ -115,7 +115,6 @@ export const Timeline_Time = styled.p`
 export const Timeline_container = styled.div`
   display: flex;
   flex-direction: column;
-  transition: 0.75s all ease;
   height: auto;
   width: 20rem;
   margin-right: ${(props) => props.right != 1 && "25rem"};
@@ -130,7 +129,6 @@ export const Timeline_container = styled.div`
   border-radius: 1rem;
   background-color: #9c9efe;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-
   &::selection {
     background-color: transparent;
   }
@@ -147,6 +145,7 @@ export const Timeline_container = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url(${(props) => props.imgUrl});
+    z-index: 10;
   }
   &::before {
     content: "";
