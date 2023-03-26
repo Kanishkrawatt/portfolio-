@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { signInWithGoogle } from "../../db/firebasefunction";
 import styled from "styled-components";
 import user from "../../public/user.png";
@@ -57,9 +57,14 @@ export const MainDiv = styled.div`
   align-items: center;
   height: 100vh;
 `;
-function SigninPage() {
-  const [state, setState] = useState(false);
-
+function SigninPage({ SignIn }) {
+  const Email = useRef(null);
+  const Password = useRef(null);
+  const handleSubmit = () => {
+    SignIn(Email.current.value, Password.current.value);
+    Email.current.value = "";
+    Password.current.value = "";
+  };
   return (
     <MainDiv>
       <Page>
@@ -68,15 +73,19 @@ function SigninPage() {
           height="100px"
           width="100px"
           placeholder="blur"
-          blurDataURL={user}
           alt="user"
         />
-        <InputBox type="text" id="username" placeholder="Username" />
-        <InputBox type="Password" id="password" placeholder="Password" />
-        <Submitbtn style={{ marginBottom: "1rem" }} type="button" id="button">
+        <InputBox type="text" ref={Email} placeholder="Username" />
+        <InputBox type="Password" ref={Password} placeholder="Password" />
+        <Submitbtn
+          style={{ marginBottom: "1rem" }}
+          onClick={handleSubmit}
+          type="button"
+          id="button"
+        >
           Login
         </Submitbtn>
-        <Submitbtn
+        {/* <Submitbtn
           type="button"
           id="button"
           style={{
@@ -91,7 +100,7 @@ function SigninPage() {
         >
           <Image src={googleImg} alt="img" height="20px" width="20px" />
           {state ? "Sign up" : "Login"} with Google
-        </Submitbtn>
+        </Submitbtn> */}
       </Page>
     </MainDiv>
   );

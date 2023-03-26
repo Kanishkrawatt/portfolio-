@@ -9,11 +9,10 @@ import {
   Chat,
 } from "../GeneralChatComponents";
 
-function ChatData(props) {
-  let Data = props.data;
+function ChatData({data}) {
   return (
     <Textdiv>
-      {Data.map((content, index) => {
+      {data.map((content, index) => {
         return (
           <Textarea key={index}>
             <SenderInfo>

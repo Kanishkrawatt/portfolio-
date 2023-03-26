@@ -1,16 +1,11 @@
-import React, { useEffect, useMemo, useState } from "react";
-import {
-  CheckUser,
-  IsAdmin,
-  UserInfo,
-  signOutWithGoogle,
-} from "../../db/firebasefunction";
-import Login from "./Login";
+import React, { useContext ,useEffect } from "react";
 import styled from "styled-components";
 import { ShowMore } from "../Project/Task/TaskComponents";
 import Link from "next/link";
-import axios from "axios";
 import ChatData from "./Chat/GeneralChat/Chats/ChatData";
+import { auth } from "../../db/";
+import db from "../../db/";
+import { collection, getDocs } from "firebase/firestore";
 
 export const Messagediv = styled.div`
   display: flex;
@@ -35,97 +30,83 @@ export const FlexDiv = styled.div`
     gap: 0;
   }
 `;
-const Admin = (props) => {
-  const user = UserInfo();
-  const admin = IsAdmin();
-  const data = props.Data;
+const Admin = ({ SignOut,Data}) => {
+  const user = auth.currentUser;
+  const [data, setData] = React.useState(null);
+  useEffect(() => {
+     const GetData = async () => {
+      const DataRef = await getDocs(collection(db, "contact"));
+      let Data = DataRef.docs.map((entry) => entry.data());
+      console.log(Data);
+      setData(Data);
+    };
+    return () => {
+      GetData();
+    }
+  }, [])
+
+  
   return (
     <>
-      {user ? (
-        admin ? (
-          <FlexDiv>
-            <Messagediv
-              style={{
-                width: "100%",
-                backgroundImage: "url('./cloud1.png')",
-                backgroundPosition: "center",
-                backgroundSize: "contain",
-                backgroundRepeat: "no-repeat",
-              }}
-            >
-              {/* <Messages /> */}
-              Hello{" "}
-              <span
-                style={{
-                  fontFamily:
-                    "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
-                  fontSize: "1.5rem",
-                }}
-              >
-                {user.displayName}
-              </span>
-              <div style={{ display: "flex", flexDirection: "row" }}>
-                <Link href={"/"}>
-                  <ShowMore color="#E1FFEE" style={{ fontSize: "small" }}>
-                    Go Back
-                  </ShowMore>
-                </Link>
-                <ShowMore
-                  color="#E1FFEE"
-                  style={{ fontSize: "small" }}
-                  onClick={() => {
-                    signOutWithGoogle();
-                  }}
-                >
-                  LogOut
-                </ShowMore>
-              </div>
-            </Messagediv>
+      <FlexDiv>
+        <Messagediv
+          style={{
+            width: "100%",
+            backgroundImage: "url('./cloud1.png')",
+            backgroundPosition: "center",
+            backgroundSize: "contain",
+            backgroundRepeat: "no-repeat",
+          }}
+        >
+          {/* <Messages /> */}
+          Hello{" "}
+          <span
+            style={{
+              fontFamily:
+                "'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif",
+              fontSize: "1.5rem",
+            }}
+          >
+            {user.email}
+          </span>
+          <div style={{ display: "flex", flexDirection: "row" }}>
+            <Link href={"/"}>
+              <ShowMore color="#E1FFEE" style={{ fontSize: "small" }}>
+                Go Back
+              </ShowMore>
+            </Link>
             <ShowMore
               color="#E1FFEE"
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                fontSize: "small",
-                width: "70vw",
-                height: "auto",
-                margin: "0",
-                textAlign: "center",
+              style={{ fontSize: "small" }}
+              onClick={() => {
+                SignOut()
               }}
             >
-              <p style={{ fontSize: "large" }}>Messages</p>
-              <ChatData data={data}>
-                {data &&
-                  data.map((item, index) => {
-                    return <div key={item.id}>{item.Message}</div>;
-                  })}
-              </ChatData>
+              LogOut
             </ShowMore>
-          </FlexDiv>
-        ) : (
-          <Messagediv style={{ backgroundColor: "#E1FFEE" }}>
-            Your are Not admin
-            <div style={{ display: "flex", flexDirection: "row" }}>
-              <Link href={"/"}>
-                <ShowMore color="#E1FFEE" style={{ fontSize: "small" }}>
-                  Go Back
-                </ShowMore>
-              </Link>
-              <ShowMore
-                color="#E1FFEE"
-                style={{ fontSize: "small" }}
-                onClick={() => {
-                  signOutWithGoogle();
-                }}
-              >
-                LogOut
-              </ShowMore>
-            </div>
-          </Messagediv>
-        )
-      ) : (
-        <Login />
-      )}
+          </div>
+        </Messagediv>
+        <ShowMore
+          color="#E1FFEE"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            fontSize: "small",
+            width: "70vw",
+            height: "auto",
+            margin: "0",
+            textAlign: "center",
+          }}
+        >
+          <p style={{ fontSize: "large" }}>Messages</p>
+          {data && <ChatData data={data}>
+            {data &&
+              data.map((item, index) => {
+                return <div key={item.id}>{item.Message}</div>;
+              })}
+          </ChatData>}
+        </ShowMore>
+      </FlexDiv>
     </>
   );
 };
