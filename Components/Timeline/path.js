@@ -14,15 +14,9 @@ import {
   Timeline_Time,
   Close,
 } from "./pathcomponent";
-import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
 
 function Path({ data }) {
   let [path, setpath] = useState(-1);
-  const ScrollElements = data.map((data, index) => {
-    return `path${index}`;
-  });
-
-  ScrollAnimation(["Timelines"]);
   const ShowPath = (index) => {
     if (path != index) {
       setpath(index);
