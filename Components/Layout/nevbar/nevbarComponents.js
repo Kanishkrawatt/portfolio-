@@ -40,13 +40,12 @@ export const Nevbarli = styled.li`
 
   &:hover {
     background-color: lightblue;
-    min-height: 30px;
-    max-height: 30px;
+    height: 30px;
     flex-direction: row;
-    max-width: 90px;
+    min-width: 5rem;
     gap: 10px;
     font-size: small;
-    transition: max-width 0.5s;
+    transition: max-width width 0.5s;
   }
   &::selection {
     background-color: transparent;

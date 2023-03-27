@@ -8,10 +8,9 @@ function Nevbar({ data }) {
   const [check, setcheck] = useState(0);
   const toggleActive = {
     backgroundColor: "lightblue",
-    minHeight: "30px",
-    maxHeight: "30px",
+    height: "30px",
     flexDirection: "row",
-    maxWidth: "90px",
+    minWidth:"5rem",
     gap: "10px",
     fontSize: "small",
   };
