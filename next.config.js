@@ -25,6 +25,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/instagram",
+        destination: "https://www.instagram.com/kanishk_rawatt/",
+        permanent: true,
+      },
+      {
         source: "/mail",
         destination:
           "https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZWQDCcVFGBBhvHqrftmPkGfQvvsFZMHXNrzksmqsRbCcwLWXFJbsFgjlbZGJtKWLQdzfg",
