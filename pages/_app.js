@@ -6,14 +6,19 @@ import OnLoadAnimation from "../Components/OnLoadAnimation/loadingAnimation";
 function MyApp({ Component, pageProps }) {
   const [loading, setLoading] = useState(true);
 
-  React.useEffect(() => {
-    setTimeout(() => setLoading(false), 3000);
-    setLoading(true);
+  // set loading until the page is loaded no setTimeout
+  useEffect(() => {
+    setTimeout(() => {
+      if (document.readyState === "complete") {
+        setLoading(false);
+      }
+    }, 100);
   }, []);
 
   return (
     <>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>| Kanishk</title>
       </Head>
       {!loading ? <Component {...pageProps} /> : <OnLoadAnimation />}
