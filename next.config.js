@@ -35,6 +35,11 @@ const nextConfig = {
           "https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZWQDCcVFGBBhvHqrftmPkGfQvvsFZMHXNrzksmqsRbCcwLWXFJbsFgjlbZGJtKWLQdzfg",
         permanent: true,
       },
+      {
+        source: "/test",
+        destination: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        permanent: true,
+      },
     ];
   },
 };
