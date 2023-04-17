@@ -11,9 +11,8 @@ function Homepage({ data }) {
         <Shortinfo>
           <Typewriter
             options={{
-              strings: data.Shortinfo,
+              strings: data.ShortInfo,
               autoStart: true,
-              pauseFor: 0,
               loop: true,
             }}
           />
