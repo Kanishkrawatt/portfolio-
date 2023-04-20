@@ -120,7 +120,7 @@ const Skills = (props) => {
           }}
         >
           {" "}
-          SHOW {item == 3 ? "MORE" : "LESS"}
+          SHOW {item == 3 || (isMobile && item == 2) ? "MORE" : "LESS"}
         </ShowMore>
       </SkillsPage>
     </section>
