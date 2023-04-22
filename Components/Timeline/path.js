@@ -23,7 +23,6 @@ function Path({ data }) {
     return `Content${index}`;
   });
   const ScrollElements = [
-    ...contentId,
     "TimeLineHeader",
     "TimeLinePathHeader",
     "TimeLineMorePathHeader",
