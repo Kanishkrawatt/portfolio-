@@ -33,6 +33,7 @@ const ShowMore = styled.div`
   @media (max-width: 480px) {
     width: 70vw;
     min-width: 30vw;
+    padding: 1.2rem 0;
     font-size: 1.5rem;
   }
 

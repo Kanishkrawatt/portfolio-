@@ -11,8 +11,8 @@ import {
   ProjectMain,
   ProjectTitle,
 } from "./ProjectContainerComponents";
-import Task from "./Task/Task";
 import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
+import Task from "./Task/Task";
 
 function Project({ data }) {
   const ScrollElements = ["ProjectTit"];
@@ -21,7 +21,9 @@ function Project({ data }) {
     <section id="Project">
       <ProjectMain>
         <ProjectTitle id="ProjectTit">PROJECTS</ProjectTitle>
-        <Task data={data} />
+        <div style={{padding:"2rem 10vw"}}>
+        <Task data={data}/>
+        </div>
       </ProjectMain>
     </section>
   );

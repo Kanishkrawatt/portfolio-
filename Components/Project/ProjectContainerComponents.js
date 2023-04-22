@@ -67,7 +67,7 @@ export const ProjectMain = styled.div`
   width: 100vw;
   flex-direction: column;
   min-height: 120vh;
-
+  padding-bottom: 20vh;
   height: auto;
   background-color: #ffd07f;
   background-image: url("/PageImg/Project.svg");
@@ -81,7 +81,7 @@ export const ProjectMain = styled.div`
   align-items: center;
   @media (max-width: 992px) {
     height: 150vh;
-    padding: 8vh 0;
+    padding-bottom: 100vh;
   }
 `;
 

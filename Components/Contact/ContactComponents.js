@@ -12,7 +12,7 @@ export const ContactPage = styled(flexCenter)`
   background-size: cover;
   z-index: 20;
   @media (max-width: 992px) {
-    height: 100vh;
+    height: 120vh;
     padding: 8vh 0;
   }
 `;

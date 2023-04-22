@@ -16,29 +16,21 @@ import {
   Buttondiv,
   Type,
   Anchor,
-  ShowMore,
+  ButtonShowMore,
   Tools,
   ToolsName,
 } from "./TaskComponents";
+import { LangImg } from "../../Skills/skillsComponents";
 
 function Task({ data }) {
-  const [item, setItem] = React.useState(3);
+  const [item, setItem] = React.useState(4);
   const ScrollElements = [];
-  data.forEach((elem, index) => {
+  data.slice(0, item).forEach((elem, index) => {
     ScrollElements.push(`Task${index}`);
   });
   ScrollAnimation(ScrollElements);
 
-  const ColorThemeArr = [
-    { main: "#E1FFEE", gradient: "#A5F1E9" },
-    { main: "#D2D79F", gradient: "#90B77D" },
-    { main: "#AFB4FF", gradient: "#9C9EFE" },
-    { main: "#FFE5B4", gradient: "#FFA500" },
-    { main: "#FFC4DD", gradient: "#E4AEC5" },
-    { main: "#FFF38C", gradient: "#D9CB50" },
-    { main: "#E64848", gradient: "#C21010" },
-    { main: "#FCF8E8", gradient: "#94B49F" },
-  ];
+  const ColorThemeArr = [{ main: "#ffe4b2", gradient: "#9C9EFE" }];
   return (
     <>
       <TaskContainer>
@@ -48,26 +40,31 @@ function Task({ data }) {
             key={index}
             colortheme={ColorThemeArr[index % ColorThemeArr.length]}
           >
-            <DateDiv>
-              <Date>{content.EventDate}</Date>
-            </DateDiv>
             <Maindiv colortheme={ColorThemeArr[index % ColorThemeArr.length]}>
-              <TaskHeading>{content.TaskHeading}</TaskHeading>
-              <Type>{content.Type}</Type>
-              <Progress>
-                Progress
-                <ProgressBar
-                  colortheme={ColorThemeArr[index % ColorThemeArr.length]}
-                  Score={content.ProgressScore}
-                />
-                <ProgressScore>{content.ProgressScore}</ProgressScore>
-              </Progress>
-              {/* <Tools>
-              <ToolsName colortheme={ColorThemeArr[index%ColorThemeArr.length]}>Tools</ToolsName>
-              <ToolsName colortheme={ColorThemeArr[index%ColorThemeArr.length]}>Tools</ToolsName>
-              <ToolsName colortheme={ColorThemeArr[index%ColorThemeArr.length]}>Tools</ToolsName>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "70%",
+                  gap:"1rem"
+                }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <TaskHeading style={{ textTransform: "capitalize" }}>
+                    {content.TaskHeading}
+                  </TaskHeading>
+                  <Type>{content.Type}</Type>
+                </div>
+              </div>
 
-            </Tools> */}
               <Buttondiv>
                 <Button
                   colortheme={ColorThemeArr[index % ColorThemeArr.length]}
@@ -99,15 +96,15 @@ function Task({ data }) {
             </Maindiv>
           </TasksDiv>
         ))}
+        {data.length > 2 && (
+          <ButtonShowMore
+            color={ColorThemeArr[0].main}
+            onClick={() => (data.length == item ? setItem(3) : setItem(4))}
+          >
+            {data.length == item ? "Show Less" : "Show More"}
+          </ButtonShowMore>
+        )}
       </TaskContainer>
-      {data.length > 3 && (
-        <ShowMore
-          color="#FFEEAF"
-          onClick={() => (data.length == item ? setItem(3) : setItem(4))}
-        >
-          {data.length == item ? "Show Less" : "Show More"}
-        </ShowMore>
-      )}
     </>
   );
 }

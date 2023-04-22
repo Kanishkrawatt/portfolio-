@@ -15,6 +15,7 @@ export const AboutPageContainer = styled(flexCenter)`
   @media (max-width: 992px) {
     height: 150vh;
     padding: 8vh 0;
+    padding-bottom: 50vh;
   }
 `;
 export const AboutMe = styled.h1`

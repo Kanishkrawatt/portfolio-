@@ -15,6 +15,7 @@ export const SkillsPage = styled(flexCenter)`
   flex-direction: column;
   @media (max-width: 800px) {
     min-height: 140vh;
+    padding-bottom: 40vh;
   }
 `;
 export const Title = styled(AboutMe)`
@@ -41,6 +42,7 @@ export const Lang = styled.div`
   }
   @media (max-width: 800px) {
     width: 70vw;
+    padding: 1.2rem 0;
   }
 `;
 

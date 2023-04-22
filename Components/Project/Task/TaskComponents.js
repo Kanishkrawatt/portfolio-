@@ -5,12 +5,18 @@ export const TasksDiv = styled.div`
   padding: 0.5rem 2rem;
   transition: 1s all ease;
   display: flex;
-  background-color: ${(props) => props.colortheme.main};
-  border-radius: 2rem;
+  ${(props) =>
+    props.img
+      ? `background-image: url(${props.img});`
+      : `background-color:${props.colortheme.main} ;`}
+  border-radius: 3rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   flex-direction: column;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   @media (max-width: 1102px) {
     width: 90%;
     height: 10rem;
@@ -19,9 +25,9 @@ export const TasksDiv = styled.div`
 export const Maindiv = styled.div`
   display: flex;
   align-items: center;
-  width: 100%;
+  height: 100%;
+  justify-content: center;
   flex-direction: column;
-  margin-top: 1rem;
   @media (max-width: 1102px) {
     flex-direction: row;
     justify-content: center;
@@ -39,10 +45,10 @@ export const TaskContainer = styled.div`
   align-items: center;
   transition: 1s all ease;
   width: 70vw;
-  gap: 1.2rem;
+  gap: 3rem;
   height: auto;
   padding: 1rem 0.5rem;
-  border-radius: 1rem;
+  border-radius: 3rem;
   margin: 1rem 2rem;
   margin-top: 3rem;
 
@@ -54,7 +60,11 @@ export const TaskHeading = styled.div`
   justify-content: center;
   height: auto;
   font-weight: 500;
-  font-size: larger;
+  font-size: 2rem;
+  font-family: "Rum Raisin", sans-serif;
+  &::selection {
+    background-color: transparent;
+  }
   @media (max-width: 1102px) {
     font-size: medium;
   }
@@ -73,6 +83,9 @@ export const DateDiv = styled.div`
 `;
 export const Type = styled.div`
   font-size: x-small;
+  &::selection {
+    background-color: transparent;
+  }
   @media (max-width: 1102px) {
     display: none;
   }
@@ -153,13 +166,19 @@ export const ShowMore = styled.div`
   transition: 0.5s all ease;
   cursor: pointer;
   border-radius: 2rem;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Rum Raisin", sans-serif;
   &::selection {
     background-color: transparent;
   }
 `;
-
+export const ButtonShowMore = styled(ShowMore)`
+  width: 50rem;
+  padding: 2rem 0;
+  display: flex;
+  @media (max-width: 1102px) {
+    margin:0;
+  }
+`;
 export const Tools = styled.div`
   display: flex;
   justify-content: center;
