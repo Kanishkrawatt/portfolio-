@@ -6,6 +6,10 @@ export const ContactPage = styled(flexCenter)`
   width: 100vw;
   align-items: flex-end;
   background-color: #ffe69a;
+  background-image: url("/PageImg/Contact.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   z-index: 20;
   @media (max-width: 992px) {
     height: 100vh;
@@ -27,6 +31,7 @@ export const ContactOuterDiv = styled.div`
   flex-wrap: wrap;
   gap: 1.25rem;
   margin-bottom: 1.5rem;
+  transition: 0.75s all ease;
   @media (max-width: 480px) {
     margin-bottom: 0.2rem;
     gap: 0;
@@ -102,4 +107,5 @@ export const ContactButtonDiv = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: 0.75s all ease;
 `;

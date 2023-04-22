@@ -14,6 +14,7 @@ import {
   ContactButtonDiv,
 } from "./ContactComponents";
 
+import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
 function Contact() {
   const id = useId();
   const FirstName = useRef();
@@ -22,7 +23,7 @@ function Contact() {
   const Message = useRef();
   function submitfunc(e) {
     e.preventDefault();
-    let data = {
+    const data = {
       id,
       FirstName: FirstName.current.value,
       LastName: LastName.current.value,
@@ -35,34 +36,40 @@ function Contact() {
     Email.current.value = "";
     Message.current.value = "";
   }
-
+  const ScrollElements = [
+    "ContactName",
+    "ContactEmail",
+    "ContactMessage",
+    "ContactButton",
+  ];
+  ScrollAnimation(ScrollElements);
   return (
     <section id="Contact">
       <ContactPage>
         <ContactForm onSubmit={submitfunc}>
-          <ContactOuterDiv>
-            <ContactInnerDivHalf>
+          <ContactOuterDiv id="ContactName">
+            <ContactInnerDivHalf >
               <ContactLabel>First Name</ContactLabel>
               <ContactInput id="grid-first-name" type="text" ref={FirstName} />
             </ContactInnerDivHalf>
-            <ContactInnerDivHalf>
+            <ContactInnerDivHalf >
               <ContactLabel>Last Name</ContactLabel>
               <ContactInput id="grid-last-name" type="text" ref={LastName} />
             </ContactInnerDivHalf>
           </ContactOuterDiv>
-          <ContactOuterDiv>
+          <ContactOuterDiv id="ContactEmail">
             <ContactInnerDiv>
               <ContactLabel>E-mail</ContactLabel>
               <ContactInput id="email" type="email" ref={Email} />
             </ContactInnerDiv>
           </ContactOuterDiv>
-          <ContactOuterDiv>
+          <ContactOuterDiv id="ContactMessage">
             <ContactInnerDiv>
               <ContactLabel>Message</ContactLabel>
               <ContactTextArea id="message" ref={Message} />
             </ContactInnerDiv>
           </ContactOuterDiv>
-          <ContactOuterDiv>
+          <ContactOuterDiv id="ContactButton">
             <ContactInnerDiv>
               <ContactButton type="submit">Send</ContactButton>
             </ContactInnerDiv>
