@@ -23,7 +23,7 @@ function Path({ data }) {
     return `TimeLine-${pindex}`;
   });
   const ScrollElements = [
-    ...TimeLine_Data,
+    ...TimeLineids,
     "TimeLineHeader",
     "TimeLinePathHeader",
     "TimeLineMorePathHeader",
