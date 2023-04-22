@@ -42,7 +42,7 @@ const ShowMore = styled.div`
 `;
 import { useMediaQuery } from "../Hooks/useMediaQuery";
 const Skills = ({ data }) => {
-  let [item, setItem] = useState(3);
+  const [item, setItem] = useState(3);
   const isMobile = useMediaQuery("(max-width: 480px)");
   useEffect(() => {
     if (isMobile) {
@@ -51,23 +51,6 @@ const Skills = ({ data }) => {
       setItem(3);
     }
   }, [isMobile]);
-
-  // let data = props.data;
-  // let data = [
-  //   { name: "Next Js", icon: "Nextjs.svg" },
-  //   { name: "Mongo Db", icon: "Mongodb.png" },
-  //   { name: "FireBase", icon: "Firebase.svg" },
-  //   { name: "JavaScript", icon: "Javascript.svg" },
-  //   { name: "Node Js", icon: "Nodejs.svg" },
-  //   { name: "HTML", icon: "HTML5.svg" },
-  //   { name: "React", icon: "React.svg" },
-  //   { name: "TypeScript", icon: "Typescript.svg" },
-  //   { name: "CSS   ", icon: "CSS3.svg" },
-  //   { name: "Express Js", icon: "Expressjs.svg" },
-  //   { name: "Styled-Component", icon: "Styledcomponent.png" },
-  //   { name: "GIT", icon: "Git.svg" },
-  // ];
-
   const ScrollElements = [
     "SkillsTitle",
     "Skillcont1",
