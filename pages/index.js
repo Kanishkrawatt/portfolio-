@@ -33,7 +33,7 @@ export default function Home({ Data }) {
 
 export async function getStaticProps() {
   const DataRef = await getDocs(collection(db, "Data"));
-  let Data = DataRef.docs.map((entry) => entry.data());
+  const Data = DataRef.docs.map((entry) => entry.data());
   return {
     props: { Data }, // will be passed to the page component as props
     revalidate: 1,
