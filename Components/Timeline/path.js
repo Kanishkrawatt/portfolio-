@@ -19,9 +19,6 @@ import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
 
 function Path({ data }) {
   const [path, setpath] = useState(0);
-  const contentId = data[path].Path.map((pathdata, index) => {
-    return `Content${index}`;
-  });
   const ScrollElements = [
     "TimeLineHeader",
     "TimeLinePathHeader",
@@ -57,7 +54,6 @@ function Path({ data }) {
                   return (
                     <>
                       <Timeline_container
-                        id={`Content${pindex}`}
                         imgUrl={`./${pathdata.year}m.png`}
                         pos={pindex}
                         right={pathdata.side}
