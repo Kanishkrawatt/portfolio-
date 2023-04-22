@@ -50,12 +50,11 @@ function Path({ data }) {
                 </PathHeader>
               )}
               {path != -1 &&
-                data[path].Path.reverse().map((pathdata, pindex) => {
+                data[path].Path.map((pathdata, pindex) => {
                   return (
                     <>
                       <Timeline_container
                         imgUrl={`./${pathdata.year}m.png`}
-                        pos={pindex}
                         right={pindex % 2 == 0 ? 1 : 2}
                       >
                         <TimeLine_Heading>{pathdata.Heading}</TimeLine_Heading>
