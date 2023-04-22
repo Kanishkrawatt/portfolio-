@@ -9,19 +9,19 @@ export const MyPathsContainer = styled.div`
   flex-direction: column;
   width: 100%;
   background-color: #afb4ff;
-  background-image: url("./PageImg/TimeLine.svg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   align-items: center;
   padding-top: 5rem;
+  gap: 6rem;
 `;
 export const ChosePath = styled.h1`
   font-family: "Rum Raisin", sans-serif;
   margin-bottom: 5rem;
   letter-spacing: 0.125rem;
   font-size: 3rem;
-  transition: 0.75s all ease;
+  transition: 0.5s all ease;
   &::selection {
     background-color: transparent;
   }
@@ -31,7 +31,7 @@ export const PathHeaderContainer = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 20rem;
-  transition: 0.75s all ease;
+  transition: 0.5s all ease;
 
   @media (max-width: 994px) {
     flex-direction: column;
@@ -59,6 +59,7 @@ export const PathHeader = styled.div`
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   padding: 2rem;
   cursor: pointer;
+  transition: 0.5s all ease;
   justify-content: center;
   &::selection {
     background-color: transparent;
@@ -68,7 +69,7 @@ export const PathHeader = styled.div`
 export const Timeline = styled.div`
   display: flex;
   flex-direction: column;
-  transition: 0.75s all ease;
+  transition: 0.5s all ease;
   align-items: center;
 `;
 export const Timeline_container_project_container = styled.div`
@@ -128,6 +129,7 @@ export const Timeline_container = styled.div`
   border: 1px solid #9c9efe;
   border-radius: 1rem;
   background-color: #9c9efe;
+  transition: 0.5s all ease;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   &::selection {
     background-color: transparent;

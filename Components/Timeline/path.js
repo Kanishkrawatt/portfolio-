@@ -15,8 +15,23 @@ import {
   Close,
 } from "./pathcomponent";
 
+import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
+
 function Path({ data }) {
-  let [path, setpath] = useState(-1);
+  const [path, setpath] = useState(0);
+  const contentId = data[path].Path.map((pathdata, index) => {
+    return `Content${index}`;
+  });
+  const ScrollElements = [
+    ...contentId,
+    "TimeLineHeader",
+    "TimeLinePathHeader",
+    "TimeLineMorePathHeader",
+    "TimeLineMoreTimeLines",
+  ];
+
+  ScrollAnimation(ScrollElements);
+
   const ShowPath = (index) => {
     if (path != index) {
       setpath(index);
@@ -25,36 +40,19 @@ function Path({ data }) {
     }
   };
   return (
-    <section id="Path">
+    <section id="TimeLine">
       <MyPathsContainer>
-        <ChosePath id="Timelines">TimeLines</ChosePath>
-        <PathHeaderContainer>
-          {data.map((content, index) => {
-            return (
-              <Timeline id={`path${index}`} key={index}>
-                {path == -1 ? (
-                  <Link
-                    style={{ textDecoration: "none", color: "black" }}
-                    href="#Timeline"
-                  >
-                    <PathHeader onClick={() => ShowPath(index)}>
-                      {content.PathHeader}
-                    </PathHeader>
-                  </Link>
-                ) : (
-                  <PathHeader onClick={() => ShowPath(index)}>
-                    {content.PathHeader}
-                  </PathHeader>
-                )}
-              </Timeline>
-            );
-          })}
-        </PathHeaderContainer>
         <PathHeaderContainer style={{ flexDirection: "column" }}>
-          <section id="Timeline">
+          <section>
             <Timeline style={{ paddingTop: "5rem" }}>
-              {path != -1 && <ChosePath>TimeLine</ChosePath>}
-              {path != -1 && <PathHeader>{data[path].PathHeader}</PathHeader>}
+              {path != -1 && (
+                <ChosePath id="TimeLineHeader">TimeLine</ChosePath>
+              )}
+              {path != -1 && (
+                <PathHeader id="TimeLinePathHeader">
+                  {data[path].PathHeader}
+                </PathHeader>
+              )}
               {path != -1 &&
                 data[path].Path.reverse().map((pathdata, pindex) => {
                   return (
@@ -84,8 +82,43 @@ function Path({ data }) {
             </Timeline>
           </section>
         </PathHeaderContainer>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "column",
+          }}
+        >
+          <ChosePath style={{ marginTop: "3rem" }} id="TimeLineMoreTimeLines">
+            More TimeLines
+          </ChosePath>
+          <PathHeaderContainer id="TimeLineMorePathHeader">
+            {data.map((content, index) => {
+              return (
+                <Timeline id={`path${index}`} key={index}>
+                  {path == -1 ? (
+                    <Link
+                      style={{ textDecoration: "none", color: "black" }}
+                      href="#Timeline"
+                    >
+                      <PathHeader onClick={() => ShowPath(index)}>
+                        {content.PathHeader}
+                      </PathHeader>
+                    </Link>
+                  ) : (
+                    <PathHeader onClick={() => ShowPath(index)}>
+                      {content.PathHeader}
+                    </PathHeader>
+                  )}
+                </Timeline>
+              );
+            })}
+          </PathHeaderContainer>
+        </div>
       </MyPathsContainer>
-      {path != -1 && (
+
+      {/* {path != -1 && (
         <Link style={{ textDecoration:"none",color:"black" }} href="#Path">
           <Close
             onClick={() => {
@@ -95,7 +128,7 @@ function Path({ data }) {
             Back to Timeline
           </Close>
         </Link>
-      )}
+      )} */}
     </section>
   );
 }
