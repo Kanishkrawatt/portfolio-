@@ -19,7 +19,11 @@ import ScrollAnimation from "../ScollAnimation/ScrollAnimation";
 
 function Path({ data }) {
   const [path, setpath] = useState(0);
+  const TimeLineids = data[path].Path.map((pathdata, pindex) => {
+    return `TimeLine-${pindex}`;
+  });
   const ScrollElements = [
+    ...TimeLine_Data,
     "TimeLineHeader",
     "TimeLinePathHeader",
     "TimeLineMorePathHeader",
@@ -52,8 +56,9 @@ function Path({ data }) {
               {path != -1 &&
                 data[path].Path.map((pathdata, pindex) => {
                   return (
-                    <>
                       <Timeline_container
+                        key={pindex}
+                        id={`TimeLine-${pindex}`}
                         imgUrl={`./${pathdata.year}m.png`}
                         right={pindex % 2 == 0 ? 1 : 2}
                       >
@@ -70,7 +75,6 @@ function Path({ data }) {
                           </Timeline_container_project>
                         </Timeline_container_project_container>
                       </Timeline_container>
-                    </>
                   );
                 })}
             </Timeline>
