@@ -69,7 +69,6 @@ export const PathHeader = styled.div`
 export const Timeline = styled.div`
   display: flex;
   flex-direction: column;
-  transition: 0.5s all ease;
   align-items: center;
 `;
 export const Timeline_container_project_container = styled.div`
@@ -129,7 +128,6 @@ export const Timeline_container = styled.div`
   border: 1px solid #9c9efe;
   border-radius: 1rem;
   background-color: #9c9efe;
-  transition: 0.5s all ease;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
   &::selection {
     background-color: transparent;
