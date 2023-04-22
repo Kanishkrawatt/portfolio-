@@ -56,7 +56,7 @@ function Path({ data }) {
                       <Timeline_container
                         imgUrl={`./${pathdata.year}m.png`}
                         pos={pindex}
-                        right={pathdata.side}
+                        right={pindex % 2 == 0 ? 1 : 2}
                       >
                         <TimeLine_Heading>{pathdata.Heading}</TimeLine_Heading>
                         <Timeline_Time>{pathdata.month}</Timeline_Time>
