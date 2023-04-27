@@ -26,7 +26,8 @@ function About({ data }) {
         </AboutContent>
         <Link
           style={{ textDecoration: "none", color: "black" }}
-          href="/resume-min.png"
+          href={`${data.Resume}`}
+          target="_blank"
         >
           <ShowMore id="Resume" color="#D9F8C4">
             Resume
