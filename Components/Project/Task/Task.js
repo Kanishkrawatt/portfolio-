@@ -89,7 +89,7 @@ function Task({ data }) {
                     style={{ textDecoration: "none", color: "black" }}
                     href={content.More}
                   >
-                    More..
+                    View.. 
                   </Anchor>
                 </Button>
               </Buttondiv>
