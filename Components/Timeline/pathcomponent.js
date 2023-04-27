@@ -98,6 +98,7 @@ export const TimeLine_Heading = styled.h1`
 `;
 export const TimeLine_Data = styled.p`
   margin: 2rem;
+  text-align: left;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 `;
