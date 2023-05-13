@@ -15,6 +15,7 @@ export default function Home({ Data }) {
   const mainStyle = {
     scrollBehavior: "smooth",
   };
+  console.log("HELLO And Welcome To My Portfolio");
 
   return (
     <div style={mainStyle}>
