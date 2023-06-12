@@ -47,7 +47,7 @@ function Task({ data }) {
                   justifyContent: "center",
                   alignItems: "center",
                   height: "70%",
-                  gap:"1rem"
+                  gap: "1rem",
                 }}
               >
                 <div
@@ -89,7 +89,7 @@ function Task({ data }) {
                     style={{ textDecoration: "none", color: "black" }}
                     href={content.More}
                   >
-                    View.. 
+                    View..
                   </Anchor>
                 </Button>
               </Buttondiv>
@@ -99,7 +99,9 @@ function Task({ data }) {
         {data.length > 2 && (
           <ButtonShowMore
             color={ColorThemeArr[0].main}
-            onClick={() => (data.length == item ? setItem(3) : setItem(4))}
+            onClick={() => {
+              setItem(item == 4 ? data.length : 4);
+            }}
           >
             {data.length == item ? "Show Less" : "Show More"}
           </ButtonShowMore>
