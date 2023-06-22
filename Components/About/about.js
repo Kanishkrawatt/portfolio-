@@ -22,7 +22,7 @@ function About({ data }) {
         <AboutMe id="AboutMe">About</AboutMe>
         <AboutContent>
           <AboutImg id="AboutImg">
-            <Image src="/ProfileImg.png" alt="img" fill />
+            <Image src="/Profile.png" alt="img" fill />
           </AboutImg>
           <AboutPara id="AboutPara">
             {data.AboutPara}
