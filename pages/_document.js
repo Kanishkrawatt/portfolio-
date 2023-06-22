@@ -29,12 +29,17 @@ export default class MyDocument extends Document {
   }
   render() {
     return (
-      <Html className="scroll-smooth" style={{ scrollBehavior: "smooth" }}>
+      <Html
+        lang="en"
+        className="scroll-smooth"
+        style={{ scrollBehavior: "smooth" }}
+      >
         <Head>
           <meta
             name="description"
             content="I'm a Full Stack Developer,Programmer from India. I have great intrest coding.  "
           />
+
           <meta
             name="keywords"
             content="Kanishk, Rawat, Portfolio, ikanishk, Kanishkrawatt,KANISHK,k_a_n_i_s_h_k_r_a_w_a_t,KANISHKRAWAT"

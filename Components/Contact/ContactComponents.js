@@ -37,7 +37,7 @@ export const ContactOuterDiv = styled.div`
     gap: 0;
   }
 `;
-export const ContactInnerDiv = styled.div`
+export const ContactInnerDiv = styled.label`
   width: 100%;
   padding: 0 0.75rem;
 
@@ -46,7 +46,7 @@ export const ContactInnerDiv = styled.div`
   }
 `;
 
-export const ContactInnerDivHalf = styled.div`
+export const ContactInnerDivHalf = styled.label`
   width: 43%;
   padding: 0 0.75rem;
   margin-bottom: 0px;

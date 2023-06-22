@@ -10,7 +10,7 @@ function Nevbar({ data }) {
     backgroundColor: "lightblue",
     height: "30px",
     flexDirection: "row",
-    minWidth:"5rem",
+    minWidth: "5rem",
     gap: "10px",
     fontSize: "small",
   };
@@ -23,27 +23,33 @@ function Nevbar({ data }) {
     <NevbarUl>
       {data.map((content, index) => {
         return (
-          <Link
+          <li
+            style={{
+              listStyle: "none",
+            }}
             key={index}
-            style={{ textDecoration: "none", color: "black" }}
-            href={content.Link}
           >
-            <Nevbarli
-              onClick={() => {
-                setcheck(index);
-              }}
-              style={check == index ? toggleActive : {}}
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              href={content.Link}
             >
-              <Image
-                src={`/icons8-${content.img}-32.png`}
-                height={25}
-                alt="img"
-                width={25}
-                priority
-              />
-              {content.Name}
-            </Nevbarli>
-          </Link>
+              <Nevbarli
+                onClick={() => {
+                  setcheck(index);
+                }}
+                style={check == index ? toggleActive : {}}
+              >
+                <Image
+                  src={`/icons8-${content.img}-32.png`}
+                  height={25}
+                  alt="img"
+                  width={25}
+                  priority
+                />
+                {content.Name}
+              </Nevbarli>
+            </Link>
+          </li>
         );
       })}
     </NevbarUl>

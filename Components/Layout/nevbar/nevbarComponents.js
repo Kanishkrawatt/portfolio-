@@ -22,7 +22,7 @@ export const NevbarUl = styled.ul`
     padding-inline-start: 10px;
   }
 `;
-export const Nevbarli = styled.li`
+export const Nevbarli = styled.div`
   list-style: none;
   display: flex;
   border-radius: 100px;
