@@ -21,18 +21,22 @@ function About({ data }) {
       <AboutPageContainer>
         <AboutMe id="AboutMe">About</AboutMe>
         <AboutContent>
-          <AboutImg id="AboutImg" src="/ProfileImg.png" alt="img" />
-          <AboutPara id="AboutPara">{data.AboutPara}</AboutPara>
+          <AboutImg id="AboutImg">
+            <Image src="/ProfileImg.png" alt="img" fill />
+          </AboutImg>
+          <AboutPara id="AboutPara">
+            {data.AboutPara}
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              href={`${data.Resume}`}
+              target="_blank"
+            >
+              <ShowMore id="Resume" color="#D9F8C4">
+                Resume
+              </ShowMore>
+            </Link>
+          </AboutPara>
         </AboutContent>
-        <Link
-          style={{ textDecoration: "none", color: "black" }}
-          href={`${data.Resume}`}
-          target="_blank"
-        >
-          <ShowMore id="Resume" color="#D9F8C4">
-            Resume
-          </ShowMore>
-        </Link>
       </AboutPageContainer>
     </section>
   );

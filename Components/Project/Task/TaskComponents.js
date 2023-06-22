@@ -160,7 +160,7 @@ export const ShowMore = styled.div`
   display: block;
   justify-content: center;
   align-items: center;
-  margin: 2rem 2rem 6rem;
+  margin: 2rem 0;
   padding: 1rem 4rem;
   background-color: ${(props) => props.color};
   transition: 0.5s all ease;
@@ -176,7 +176,7 @@ export const ButtonShowMore = styled(ShowMore)`
   padding: 2rem 0;
   display: flex;
   @media (max-width: 1102px) {
-    margin:0;
+    margin: 0;
   }
 `;
 export const Tools = styled.div`

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { flexCenter } from "../../styles/flexCenter";
+import Image from "next/image";
 
 export const AboutPageContainer = styled(flexCenter)`
   height: 100vh;
@@ -29,19 +30,26 @@ export const AboutMe = styled.h1`
 `;
 export const AboutPara = styled.p`
   padding-top: 2rem;
+  text-align: justify;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   transition: 0.75s all ease;
-
+  width: 40%;
   &::selection {
     background-color: transparent;
   }
   @media (max-width: 480px) {
     padding-top: 0rem;
+    margin-left: 2rem;
+
+    width: 75%;
   }
 `;
-export const AboutImg = styled.img`
-  height: 15rem;
+export const AboutImg = styled.div`
+  height: 100%;
+  position: relative;
+  aspect-ratio: 1/1;
+  overflow: hidden;
   background-color: #d9f8c4;
   border-radius: 50%;
   transition: 1s all ease;
@@ -62,6 +70,7 @@ export const AboutContent = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 100%;
 
   @media (max-width: 480px) {
     flex-direction: column;
