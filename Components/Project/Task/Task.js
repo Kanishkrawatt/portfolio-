@@ -70,7 +70,7 @@ function Task({ data }) {
                   colortheme={ColorThemeArr[index % ColorThemeArr.length]}
                   left
                 >
-                  <Anchor href={content.Github}>
+                  <Anchor href={content.Github} aria-label="GithubURL">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="25"
@@ -86,6 +86,7 @@ function Task({ data }) {
                   colortheme={ColorThemeArr[index % ColorThemeArr.length]}
                 >
                   <Anchor
+                    aria-label="MoreURL"
                     style={{ textDecoration: "none", color: "black" }}
                     href={content.More}
                   >

@@ -48,7 +48,7 @@ export const AboutPara = styled.p`
 export const AboutImg = styled.div`
   height: 100%;
   position: relative;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1/0.99;
   overflow: hidden;
   background-color: #d9f8c4;
   border-radius: 50%;
