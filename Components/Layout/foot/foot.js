@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import Image from "next/image";
 
 const Footer = styled.div`
-  background-image: url("/cloud.png");
   background-repeat: no-repeat;
+  position: relative;
   background-position: bottom;
   background-size: cover;
   z-index: 100;
@@ -43,6 +44,12 @@ function Foot() {
   return (
     <footer>
       <Footer>
+        <Image
+          style={{ position: "absolute", objectFit: "cover", zIndex: "-1" }}
+          src="/cloud.png"
+          alt="cloud"
+          fill
+        />
         <SidbarContainer>
           <Anchor
             aria-label="instagram"
