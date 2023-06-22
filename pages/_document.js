@@ -50,6 +50,19 @@ export default class MyDocument extends Document {
           <meta name="revisit-after" content="1 days" />
           <meta name="author" content="Kanishk rawat" />
           <meta name="theme-color" content="#000000" />
+
+          <meta
+            property="twitter:image"
+            content="https://firebasestorage.googleapis.com/v0/b/portfolio-cb414.appspot.com/o/img.jpeg?alt=media&token=a6b5b574-23e6-4224-b77d-ecca0a94bc25"
+          />
+          <meta
+            property="twitter:title"
+            content="Kanishk Rawat Twitter Profile"
+          ></meta>
+          <meta
+            property="twitter:description"
+            content="Kanishk Rawat | Full Stack Developer,Programmer from India. I have great intrest coding. "
+          ></meta>
           <meta name="msapplication-navbutton-color" content="#000000" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
