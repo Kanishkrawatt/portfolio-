@@ -6,7 +6,7 @@ const Foot = dynamic(() => import("../Components/Layout/foot/foot"));
 const About = dynamic(() => import("../Components/About/about"));
 const Path = dynamic(() => import("../Components/Timeline/path"));
 const Nevbar = dynamic(() => import("../Components/Layout/nevbar/nevbar"));
-const Homepage = dynamic(() => import("../Components/HomePage/Homepage"));
+import Homepage from "../Components/HomePage/Homepage";
 const Contact = dynamic(() => import("../Components/Contact"));
 const Project = dynamic(() => import("../Components/Project/Project"));
 const Skills = dynamic(() => import("../Components/Skills"));
