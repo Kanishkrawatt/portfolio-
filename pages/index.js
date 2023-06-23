@@ -1,13 +1,16 @@
 import db from "../db";
-import Foot from "../Components/Layout/foot/foot";
-import About from "../Components/About/about";
-import Path from "../Components/Timeline/path";
-import Nevbar from "../Components/Layout/nevbar/nevbar";
-import Homepage from "../Components/HomePage/Homepage";
-import PageAnimation from "../Components/PageAnimation/page";
-import Contact from "../Components/Contact";
-import Project from "../Components/Project/Project";
-import Skills from "../Components/Skills";
+
+import dynamic from "next/dynamic";
+
+const Foot = dynamic(() => import("../Components/Layout/foot/foot"));
+const About = dynamic(() => import("../Components/About/about"));
+const Path = dynamic(() => import("../Components/Timeline/path"));
+const Nevbar = dynamic(() => import("../Components/Layout/nevbar/nevbar"));
+const Homepage = dynamic(() => import("../Components/HomePage/Homepage"));
+const Contact = dynamic(() => import("../Components/Contact"));
+const Project = dynamic(() => import("../Components/Project/Project"));
+const Skills = dynamic(() => import("../Components/Skills"));
+const PageAnimation = dynamic(() => import("../Components/PageAnimation/page"));
 
 import { collection, getDocs } from "firebase/firestore";
 

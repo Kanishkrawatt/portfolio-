@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import React from "react";
 
 function GetPosition(id) {
-  // return the scoll value of the section
-  const Position = document.getElementById(id).offsetTop;
+  const Position = document.getElementById(id)?.offsetTop ?? 0;
   return Position;
 }
 

@@ -28,7 +28,7 @@ export const AboutMe = styled.h1`
     background-color: transparent;
   }
 `;
-export const AboutPara = styled.p`
+export const AboutPara = styled.div`
   padding-top: 2rem;
   text-align: justify;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
