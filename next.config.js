@@ -46,6 +46,7 @@ const nextConfig = {
       {
         source: "/quote",
         destination: "https://quote.ikanishk.me",
+        permanent: true,
       },
       {
         source: "/test",
