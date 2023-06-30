@@ -39,6 +39,15 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/api",
+        destination: "https://api.ikanishk.me",
+        permanent: true,
+      },
+      {
+        source: "/quote",
+        destination: "https://quote.ikanishk.me",
+      },
+      {
         source: "/test",
         destination: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         permanent: true,
