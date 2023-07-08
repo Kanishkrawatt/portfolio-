@@ -7,7 +7,7 @@ const Footer = styled.div`
   position: relative;
   background-position: bottom;
   background-size: cover;
-  z-index: 100;
+  z-index: 10;
   text-align: center;
   padding: 4rem;
   padding-top: 15rem;

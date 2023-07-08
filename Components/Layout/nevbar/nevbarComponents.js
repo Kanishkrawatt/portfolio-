@@ -12,7 +12,7 @@ export const NevbarUl = styled.ul`
   margin-left: 0px;
   justify-content: center;
   cursor: pointer;
-  z-index: 2;
+  z-index: 20;
   -webkit-tap-highlight-color: transparent;
   &::selection {
     background-color: transparent;
