@@ -40,6 +40,6 @@ export async function getStaticProps() {
   const Data = DataRef.docs.map((entry) => entry.data());
   return {
     props: { Data }, // will be passed to the page component as props
-    revalidate: 1,
+    revalidate: 60,
   };
 }
