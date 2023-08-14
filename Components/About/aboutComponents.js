@@ -41,7 +41,6 @@ export const AboutPara = styled.div`
   @media (max-width: 480px) {
     padding-top: 0rem;
     margin-left: 2rem;
-
     width: 75%;
   }
 `;
@@ -65,7 +64,7 @@ export const AboutImg = styled.div`
 `;
 export const AboutContent = styled.div`
   display: flex;
-  margin: 0 20vw;
+  margin: 0 auto;
   gap: 5rem;
   flex-direction: row;
   justify-content: center;

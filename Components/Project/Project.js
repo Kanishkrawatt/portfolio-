@@ -22,7 +22,7 @@ function Project({ data }) {
     <section id="Project">
       <ProjectMain>
         <ProjectTitle id="ProjectTit">PROJECTS</ProjectTitle>
-        <div style={{ padding: "2rem 10vw" }}>
+        <div style={{ padding: "2rem auto" }}>
           <Task data={data} />
         </div>
       </ProjectMain>

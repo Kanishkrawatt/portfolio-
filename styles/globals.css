@@ -1,6 +1,8 @@
 body{
   margin: 0px;
   transition: all 0.2s;
+  overflow: hidden;
+  width: 100vw;
 }
 body::-webkit-scrollbar {
   display: none;
