@@ -5,15 +5,15 @@ import Script from "next/script";
 import OnLoadAnimation from "../Components/OnLoadAnimation/loadingAnimation";
 
 function MyApp({ Component, pageProps }) {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      if (document.readyState === "complete") {
-        setLoading(false);
-      }
-    }, 100);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     if (document.readyState === "complete") {
+  //       setLoading(false);
+  //     }
+  //   }, 100);
+  // }, []);
 
   return (
     <>
