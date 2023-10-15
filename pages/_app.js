@@ -33,28 +33,6 @@ function MyApp({ Component, pageProps }) {
           gtag('config', '${process.env.NEXT_PUBLIC_FB_measurementId}');
         `}
       </Script>
-      <Script id="schema" type="application/ld+json">
-        {`{
-        "@context": "https://schema.org/", 
-  "@type": "BreadcrumbList", 
-  "itemListElement": [{
-    "@type": "ListItem", 
-    "position": 1, 
-    "name": "About",
-    "item": "https://www.ikanishk.me/#About"  
-  },{
-    "@type": "ListItem", 
-    "position": 2, 
-    "name": "Skills",
-    "item": "https://www.ikanishk.me/#Skills"  
-  },{
-    "@type": "ListItem", 
-    "position": 3, 
-    "name": "Project",
-    "item": "https://www.ikanishk.me/#Project"  
-  }]
-}`}
-      </Script>
 
       {!loading ? <Component {...pageProps} /> : <OnLoadAnimation />}
     </>
