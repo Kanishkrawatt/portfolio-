@@ -1,6 +1,6 @@
 # Personal Portfolio Website
 
-- [Live Demo](https://ikanishk.me/)
+- [Live Demo](https://kanishkrawatt.tech/)
 
 Hello there, welcome to the repository of my Personal Portfolio Website!! <br>
 I would suggest to read [README.md](./README.md) first and then proceed with exploring the repository. <br>
