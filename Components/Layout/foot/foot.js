@@ -47,6 +47,7 @@ function Foot() {
         <Image
           style={{ position: "absolute", objectFit: "cover", zIndex: "-1" }}
           src="/cloud.png"
+          priority={true}
           alt="cloud"
           fill
         />

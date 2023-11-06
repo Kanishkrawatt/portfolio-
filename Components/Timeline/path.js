@@ -33,11 +33,7 @@ function Path({ data }) {
   ScrollAnimation(ScrollElements);
 
   const ShowPath = (index) => {
-    if (path != index) {
-      setpath(index);
-    } else {
-      setpath(-1);
-    }
+    setpath(index);
   };
   return (
     <section id="TimeLine">
@@ -56,25 +52,25 @@ function Path({ data }) {
               {path != -1 &&
                 data[path].Path.map((pathdata, pindex) => {
                   return (
-                      <Timeline_container
-                        key={pindex}
-                        id={`TimeLine-${pindex}`}
-                        imgUrl={`./${pathdata.year}m.png`}
-                        right={pindex % 2 == 0 ? 1 : 2}
-                      >
-                        <TimeLine_Heading>{pathdata.Heading}</TimeLine_Heading>
-                        <Timeline_Time>{pathdata.month}</Timeline_Time>
+                    <Timeline_container
+                      key={pindex}
+                      id={`TimeLine-${pindex}`}
+                      imgUrl={`./${pathdata.year}m.png`}
+                      right={pindex % 2 == 0 ? 1 : 2}
+                    >
+                      <TimeLine_Heading>{pathdata.Heading}</TimeLine_Heading>
+                      <Timeline_Time>{pathdata.month}</Timeline_Time>
 
-                        <TimeLine_Data>{pathdata.para}</TimeLine_Data>
-                        <Timeline_container_project_container>
-                          <Timeline_container_project>
-                            Projects
-                          </Timeline_container_project>
-                          <Timeline_container_project>
-                            More..
-                          </Timeline_container_project>
-                        </Timeline_container_project_container>
-                      </Timeline_container>
+                      <TimeLine_Data>{pathdata.para}</TimeLine_Data>
+                      <Timeline_container_project_container>
+                        <Timeline_container_project>
+                          Projects
+                        </Timeline_container_project>
+                        <Timeline_container_project>
+                          More..
+                        </Timeline_container_project>
+                      </Timeline_container_project_container>
+                    </Timeline_container>
                   );
                 })}
             </Timeline>
@@ -105,9 +101,14 @@ function Path({ data }) {
                       </PathHeader>
                     </Link>
                   ) : (
-                    <PathHeader onClick={() => ShowPath(index)}>
-                      {content.PathHeader}
-                    </PathHeader>
+                    <Link
+                      style={{ textDecoration: "none", color: "black" }}
+                      href="#TimeLine"
+                    >
+                      <PathHeader onClick={() => ShowPath(index)}>
+                        {content.PathHeader}
+                      </PathHeader>
+                    </Link>
                   )}
                 </Timeline>
               );
