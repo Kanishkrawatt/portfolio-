@@ -178,6 +178,11 @@ export const ButtonShowMore = styled(ShowMore)`
   @media (max-width: 1102px) {
     margin: 0;
   }
+  @media (min-width: 1783px) {
+    height: 15rem;
+    padding: 0.5rem 2rem;
+    font-size: 2.5rem;
+  }
 `;
 export const Tools = styled.div`
   display: flex;

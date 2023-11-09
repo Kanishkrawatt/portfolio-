@@ -28,7 +28,7 @@ function Task({ data }) {
   data.slice(0, item).forEach((elem, index) => {
     ScrollElements.push(`Task${index}`);
   });
-  ScrollAnimation(ScrollElements);
+  ScrollAnimation(["Task-ShowMore", ...ScrollElements]);
 
   const ColorThemeArr = [{ main: "#ffe4b2", gradient: "#9C9EFE" }];
   return (
@@ -99,6 +99,7 @@ function Task({ data }) {
         ))}
         {data.length > 2 && (
           <ButtonShowMore
+            id={`Task-ShowMore`}
             color={ColorThemeArr[0].main}
             onClick={() => {
               setItem(item == 4 ? data.length : 4);
