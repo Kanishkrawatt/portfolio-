@@ -172,7 +172,7 @@ export const ShowMore = styled.div`
   }
 `;
 export const ButtonShowMore = styled(ShowMore)`
-  width: 50rem;
+  width: 46.5rem;
   padding: 2rem 0;
   display: flex;
   @media (max-width: 1102px) {
