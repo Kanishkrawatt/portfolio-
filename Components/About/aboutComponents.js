@@ -30,9 +30,6 @@ export const AboutMe = styled.h1`
 `;
 export const AboutPara = styled.div`
   padding-top: 2rem;
-  text-align: justify;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   transition: 0.75s all ease;
   width: 40%;
   &::selection {

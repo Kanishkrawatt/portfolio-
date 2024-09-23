@@ -9,7 +9,7 @@ export const DashboardDiv = styled.div`
 `;
 
 function Dashboard(props) {
-  let Data = props.Data;
+  const Data = props.Data;
   return (
     <DashboardDiv>
       {/* <Project/> */}

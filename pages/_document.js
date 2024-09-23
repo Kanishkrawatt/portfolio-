@@ -55,6 +55,7 @@ export default class MyDocument extends Document {
             property="twitter:image"
             content="https://firebasestorage.googleapis.com/v0/b/portfolio-cb414.appspot.com/o/img.jpeg?alt=media&token=a6b5b574-23e6-4224-b77d-ecca0a94bc25"
           />
+          <meta name="google-adsense-account" content="ca-pub-3044813027595870"></meta>
           <meta
             property="twitter:title"
             content="Kanishk Rawat Twitter Profile"

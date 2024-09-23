@@ -36,7 +36,7 @@ const Admin = ({ SignOut,Data}) => {
   useEffect(() => {
      const GetData = async () => {
       const DataRef = await getDocs(collection(db, "contact"));
-      let Data = DataRef.docs.map((entry) => entry.data());
+      const Data = DataRef.docs.map((entry) => entry.data());
       console.log(Data);
       setData(Data);
     };
