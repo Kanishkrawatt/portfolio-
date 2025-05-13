@@ -58,6 +58,10 @@ export const AboutImg = styled.div`
     height: 15rem;
     width: 15rem;
   }
+  img {
+    object-fit: cover;
+    object-position:top;
+  }
 `;
 export const AboutContent = styled.div`
   display: flex;

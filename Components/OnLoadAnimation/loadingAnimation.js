@@ -1,4 +1,3 @@
-import Lottie from "react-lottie";
 import styled from "styled-components";
 import animationData from "./animationConfig.json";
 
@@ -26,7 +25,6 @@ const Container = styled.div`
 const OnLoadAnimation = () => {
   return (
     <Container>
-      <Lottie options={Options} width="13rem" height="13rem" />
     </Container>
   );
 };
